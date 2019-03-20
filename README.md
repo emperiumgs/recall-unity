@@ -16,7 +16,7 @@ Voice over is originally in Brazilian Portuguese but there are subtitles availab
 
 ## Team
 - Game Designer: Anderson Verissimo
-- Lead Game Developer: Joao Borks
+- Lead Game Developer: [Joao Borks](https://github.com/JoaoBorks)
 - Game Developer: Maycon José
 - Lead Artist: Jessica Miyuki Takahashi
 - Artist: Rodrigo Ferreira
@@ -25,7 +25,7 @@ Voice over is originally in Brazilian Portuguese but there are subtitles availab
 #### Voice Over:
 - Ana Carolina Capel (Liss)
 - Jessica Miyuki Takahashi (Tess)
-- Joao Borks (Doctor)
+- [Joao Borks](https://github.com/JoaoBorks) (Doctor)
 
 #### Special thanks to:
 - Ronaldo Junior
