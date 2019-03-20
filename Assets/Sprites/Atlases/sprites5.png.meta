@@ -1,0 +1,2369 @@
+fileFormatVersion: 2
+guid: bb2a19d75aeb2c1488e748dd63caaae8
+timeCreated: 1477867401
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dr_turn0000
+    21300002: dr_turn0001
+    21300004: dr_turn0002
+    21300006: dr_turn0003
+    21300008: dr_turn0004
+    21300010: dr_turn0005
+    21300012: dr_turn0006
+    21300014: dr_turn0007
+    21300016: dr_turn0008
+    21300018: dr_turn0009
+    21300020: dr_turn0010
+    21300022: dr_turn0011
+    21300024: dr_turn0012
+    21300026: dr_turn0013
+    21300028: dr_turn0014
+    21300030: dr_turn0015
+    21300032: dr_turn0016
+    21300034: dr_turn0017
+    21300036: dr_turn0018
+    21300038: dr_turn0019
+    21300040: dr_turn0020
+    21300042: dr_turn0021
+    21300044: dr_turn0022
+    21300046: dr_turn0023
+    21300048: dr_turn0024
+    21300050: dr_turn0025
+    21300052: dr_turn0026
+    21300054: dr_turn0027
+    21300056: dr_turn0028
+    21300058: dr_turn0029
+    21300060: dr_turn0030
+    21300062: dr_turn0031
+    21300064: dr_turn0032
+    21300066: dr_turn0033
+    21300068: dr_turn0034
+    21300070: dr_turn0035
+    21300072: dr_turn0036
+    21300074: dr_turn0037
+    21300076: dr_turn0038
+    21300078: dr_turn0039
+    21300080: dr_turn0040
+    21300082: dr_turn0041
+    21300084: dr_turn0042
+    21300086: dr_turn0043
+    21300088: dr_turn0044
+    21300090: dr_turn0045
+    21300092: dr_turn0046
+    21300094: dr_turn0047
+    21300096: dr_turn0048
+    21300098: dr_turn0049
+    21300100: dr_turn0050
+    21300102: dr_turn0051
+    21300104: dr_turn0052
+    21300106: dr_turn0053
+    21300108: dr_turn0054
+    21300110: dr_turn0055
+    21300112: dr_turn0056
+    21300114: dr_turn0057
+    21300116: dr_turn0058
+    21300118: dr_turn0059
+    21300120: dr_turn0060
+    21300122: dr_turn0061
+    21300124: dr_turn0062
+    21300126: dr_turn0063
+    21300128: dr_turn0064
+    21300130: dr_turn0065
+    21300132: dr_turn0066
+    21300134: dr_turn0067
+    21300136: dr_turn0068
+    21300138: dr_turn0069
+    21300140: dr_turn0070
+    21300142: dr_turn0071
+    21300144: dr_turn0072
+    21300146: dr_turn0073
+    21300148: dr_turn0074
+    21300150: dr_turn0075
+    21300152: dr_turn0076
+    21300154: dr_turn0077
+    21300156: dr_turn0078
+    21300158: dr_turn0079
+    21300160: dr_turn0080
+    21300162: dr_turn0081
+    21300164: dr_turn0082
+    21300166: dr_turn0083
+    21300168: dr_turn0084
+    21300170: dr_turn0085
+    21300172: dr_turn0086
+    21300174: dr_turn0087
+    21300176: dr_turn0088
+    21300178: dr_turn0089
+    21300180: dr_turn0090
+    21300182: dr_turn0091
+    21300184: dr_turn0092
+    21300186: dr_turn0093
+    21300188: dr_turn0094
+    21300190: dr_turn0095
+    21300192: dr_turn0096
+    21300194: dr_turn0097
+    21300196: dr_turn0098
+    21300198: dr_turn0099
+    21300200: dr_turn0100
+    21300202: dr_turn0101
+    21300204: dr_turn0102
+    21300206: dr_turn0103
+    21300208: dr_turn0104
+    21300210: dr_turn0105
+    21300212: dr_turn0106
+    21300214: dr_turn0107
+    21300216: dr_turn0108
+    21300218: dr_turn0109
+    21300220: dr_turn0110
+    21300222: dr_turn0111
+    21300224: dr_turn0112
+    21300226: dr_turn0113
+    21300228: dr_turn0114
+    21300230: dr_turn0115
+    21300232: dr_turn0116
+    21300234: dr_turn0117
+    21300236: dr_turn0118
+    21300238: dr_turn0119
+    21300240: dr_turn0120
+    21300242: dr_turn0121
+    21300244: dr_turn0122
+    21300246: dr_turn0123
+    21300248: dr_turn0124
+    21300250: dr_turn0125
+    21300252: dr_turn0126
+    21300254: dr_turn0127
+    21300256: dr_turn0128
+    21300258: dr_turn0129
+    21300260: dr_turn0130
+    21300262: dr_turn0131
+    21300264: dr_turn0132
+    21300266: dr_turn0133
+    21300268: dr_turn0134
+    21300270: dr_turn0135
+    21300272: dr_turn0136
+    21300274: dr_turn0137
+    21300276: dr_turn0138
+    21300278: dr_turn0139
+    21300280: dr_turn0140
+    21300282: dr_turn0141
+    21300284: dr_turn0142
+    21300286: dr_turn0143
+    21300288: dr_turn0144
+    21300290: dr_turn0145
+    21300292: dr_turn0146
+    21300294: dr_turn0147
+    21300296: dr_turn0148
+    21300298: dr_turn0149
+    21300300: dr_turn0150
+    21300302: dr_turn0151
+    21300304: dr_turn0152
+    21300306: dr_turn0153
+    21300308: dr_turn0154
+    21300310: dr_turn0155
+    21300312: dr_turn0156
+    21300314: dr_turn0157
+    21300316: dr_turn0158
+    21300318: dr_turn0159
+    21300320: dr_turn0160
+    21300322: dr_turn0161
+    21300324: dr_turn0162
+    21300326: dr_turn0163
+    21300328: dr_turn0164
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dr_turn0000
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 929
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0001
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0002
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0003
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0004
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0005
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 782
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0006
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0007
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0008
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0009
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0010
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 635
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0011
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0012
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0013
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0014
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0015
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 488
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0016
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0017
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0018
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0019
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0020
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 341
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0021
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0022
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0023
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0024
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0025
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 194
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0026
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0027
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0028
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0029
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0030
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 47
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0031
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0032
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0033
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 929
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0034
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0035
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0036
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 782
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0037
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0038
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0039
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0040
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 635
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0041
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0042
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0043
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0044
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 635
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0045
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 488
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0046
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0047
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0048
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0049
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0050
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0051
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 488
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0052
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 341
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0053
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0054
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0055
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0056
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0057
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0058
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 341
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0059
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 194
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0060
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0061
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0062
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0063
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0064
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0065
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 194
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0066
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 47
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0067
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0068
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0069
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0070
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0071
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0072
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 47
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0073
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 929
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0074
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0075
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0076
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0077
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0078
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0079
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 929
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0080
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 782
+        width: 139
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0081
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0082
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0083
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0084
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0085
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0086
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 782
+        width: 139
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0087
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0088
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0089
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0090
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0091
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0092
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0093
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0094
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0095
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0096
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0097
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0098
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0099
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0100
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0101
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0102
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0103
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0104
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0105
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0106
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0107
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0108
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0109
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0110
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0111
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0112
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0113
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0114
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0115
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0116
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0117
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0118
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0119
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0120
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0121
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0122
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0123
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0124
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0125
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0126
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0127
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0128
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0129
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0130
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0131
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0132
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0133
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0134
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0135
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0136
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0137
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0138
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0139
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0140
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0141
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0142
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0143
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0144
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0145
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0146
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0147
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0148
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0149
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0150
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0151
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0152
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0153
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0154
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0155
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0156
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0157
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0158
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0159
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0160
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0161
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0162
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0163
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: dr_turn0164
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,605 @@
+fileFormatVersion: 2
+guid: 541fa11339e4da845b69e708f4f85772
+timeCreated: 1477877489
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: xdr_death0000
+    21300002: xdr_death0001
+    21300004: xdr_death0002
+    21300006: xdr_death0003
+    21300008: xdr_death0004
+    21300010: xdr_death0005
+    21300012: xdr_death0006
+    21300014: xdr_death0007
+    21300016: xdr_death0008
+    21300018: xdr_death0009
+    21300020: xdr_ooze0000
+    21300022: xdr_ooze0001
+    21300024: xdr_ooze0002
+    21300026: xdr_ooze0003
+    21300028: xdr_ooze0004
+    21300030: xdr_ooze0005
+    21300032: xdr_ooze0006
+    21300034: xdr_ooze0007
+    21300036: xdr_ooze0008
+    21300038: xdr_ooze0009
+    21300040: xdr_ooze0010
+    21300042: xdr_ooze0011
+    21300044: xdr_ooze0012
+    21300046: xdr_ooze0013
+    21300048: xdr_ooze0014
+    21300050: xdr_slash0000
+    21300052: xdr_slash0001
+    21300054: xdr_slash0002
+    21300056: xdr_slash0003
+    21300058: xdr_slash0004
+    21300060: xdr_slash0005
+    21300062: xdr_slash0006
+    21300064: xdr_slash0007
+    21300066: xdr_slash0008
+    21300068: xdr_slash0009
+    21300070: xdr_slash0010
+    21300072: xdr_slash0011
+    21300074: xdr_slash0012
+    21300076: xdr_slash0013
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: xdr_death0000
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0001
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0002
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0003
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0004
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0005
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0006
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0007
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0008
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1562
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_death0009
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0000
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0001
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0002
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0003
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0004
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0005
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0006
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0007
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0008
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0009
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0010
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0011
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 590
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0012
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0013
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_ooze0014
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0000
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0001
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0002
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 590
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0003
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0004
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0005
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0006
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0007
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0008
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0009
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0010
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0011
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0012
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: xdr_slash0013
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1076
+        width: 617
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
