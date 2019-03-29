@@ -15,7 +15,7 @@ The game is a 2d platformer where the main character, Liss, has mental powers an
 Voice over is originally in Brazilian Portuguese but there are subtitles available, created in a JSON Format.
 
 ## Team
-- Game Designer: Anderson Verissimo
+- Game Designer: [Anderson Verissimo](https://github.com/AndersonVr)
 - Lead Game Developer: [Joao Borks](https://github.com/JoaoBorks)
 - Game Developer: Maycon José
 - Lead Artist: Jessica Miyuki Takahashi
