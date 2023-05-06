@@ -65,6 +65,6 @@ public class XDoctor : EnemyMelee
     protected override IEnumerator Death()
     {
         yield return new WaitForSeconds(DEATH_TIME);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 }

@@ -37,6 +37,7 @@ namespace Recall.UI
                 _mainGroup.alpha = 1;
                 yield return FadeToAlpha(1, _logoGroup);
                 yield return new WaitForSeconds(_showTime);
+                _mainGroup.blocksRaycasts = false;
                 yield return FadeToAlpha(0, _mainGroup);
                 gameObject.SetActive(false);
             }

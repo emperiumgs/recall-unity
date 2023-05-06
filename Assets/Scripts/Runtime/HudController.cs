@@ -36,6 +36,7 @@ public class HudController : MonoBehaviour
 
     public void ToMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }
