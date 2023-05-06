@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sprites4.png">
+	<!-- Created with Adobe Flash Professional version 14.2.0.20 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="xdr_claw0000" x="2" y="2" width="617" height="484" pivotX="308.5" pivotY="484"/>
+	<SubTexture name="xdr_claw0001" x="2" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0002" x="2" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0003" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0004" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0005" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0006" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0007" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0008" x="1240" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0009" x="1240" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0010" x="1240" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_claw0011" x="2" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0012" x="2" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0013" x="2" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0014" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0015" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0016" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0017" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0018" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0019" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0020" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0021" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0022" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_claw0023" x="621" y="488" width="617" height="484"/>
+</TextureAtlas>

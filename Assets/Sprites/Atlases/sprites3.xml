@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sprites3.png">
+	<!-- Created with Adobe Flash Professional version 14.2.0.20 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="xdr_death0000" x="2" y="2" width="617" height="484" pivotX="308.5" pivotY="484"/>
+	<SubTexture name="xdr_death0001" x="2" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0002" x="2" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0003" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0004" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0005" x="621" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0006" x="1240" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0007" x="1240" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0008" x="1240" y="2" width="617" height="484"/>
+	<SubTexture name="xdr_death0009" x="2" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0000" x="621" y="974" width="617" height="484" pivotX="308.5" pivotY="484"/>
+	<SubTexture name="xdr_ooze0001" x="621" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0002" x="621" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0003" x="621" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0004" x="621" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0005" x="621" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0006" x="621" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0007" x="621" y="1460" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0008" x="621" y="1460" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0009" x="621" y="1460" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0010" x="621" y="1460" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0011" x="1240" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0012" x="1240" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0013" x="1240" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_ooze0014" x="1240" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_slash0000" x="2" y="974" width="617" height="484" pivotX="308.5" pivotY="484"/>
+	<SubTexture name="xdr_slash0001" x="2" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_slash0002" x="2" y="974" width="617" height="484"/>
+	<SubTexture name="xdr_slash0003" x="2" y="1460" width="617" height="484"/>
+	<SubTexture name="xdr_slash0004" x="2" y="1460" width="617" height="484"/>
+	<SubTexture name="xdr_slash0005" x="2" y="1460" width="617" height="484"/>
+	<SubTexture name="xdr_slash0006" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_slash0007" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_slash0008" x="621" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_slash0009" x="1240" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_slash0010" x="1240" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_slash0011" x="1240" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_slash0012" x="1240" y="488" width="617" height="484"/>
+	<SubTexture name="xdr_slash0013" x="1240" y="488" width="617" height="484"/>
+</TextureAtlas>
