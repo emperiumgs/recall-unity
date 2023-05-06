@@ -1,12 +1,18 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "2.3.3",
+    "com.mygamedevtools.extensions": "2.0.0",
+    "com.mygamedevtools.scene-loader": "2.1.1",
+    "com.mygamedevtools.script-template": "3.4.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.cinemachine": "2.9.5",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.20",
     "com.unity.ide.visualstudio": "2.0.18",
     "com.unity.ide.vscode": "1.2.5",
+    "com.unity.recorder": "4.0.0",
     "com.unity.test-framework": "1.1.33",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.4",
@@ -42,5 +48,16 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Open UPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.cysharp.unitask",
+        "com.mygamedevtools",
+        "com.openupm"
+      ]
+    }
+  ]
 }
