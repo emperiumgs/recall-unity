@@ -113,9 +113,11 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 		attackable = true;
 	}
 
-	protected virtual void OnDrawGizmos()
+	protected virtual void OnDrawGizmosSelected()
 	{
+		var color = Gizmos.color;
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, range);
+		Gizmos.color = color;
 	}
 }

@@ -29,7 +29,9 @@ public abstract class Trigger2D : MonoBehaviour
 
     void OnDrawGizmos()
     {
+        var color = Gizmos.color;
         Gizmos.color = new Color(1, 0, 1, .3f);
         Gizmos.DrawCube(centerPos, size);
+        Gizmos.color = color;
     }
 }

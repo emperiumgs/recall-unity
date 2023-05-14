@@ -9410,57 +9410,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall0000
-      rect:
-        serializedVersion: 2
-        x: 862
-        y: 261
-        width: 157
-        height: 173
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab505410000000000800000000000000
-      internalID: 21300666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterfall0001
-      rect:
-        serializedVersion: 2
-        x: 862
-        y: 261
-        width: 159
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb505410000000000800000000000000
-      internalID: 21300668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: waterfall0002
       rect:
         serializedVersion: 2
         x: 862
-        y: 261
-        width: 159
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 262
+        width: 158
+        height: 174
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9473,57 +9431,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall0003
-      rect:
-        serializedVersion: 2
-        x: 611
-        y: 236
-        width: 157
-        height: 173
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c505410000000000800000000000000
-      internalID: 21300672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterfall0004
-      rect:
-        serializedVersion: 2
-        x: 611
-        y: 236
-        width: 159
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c505410000000000800000000000000
-      internalID: 21300674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: waterfall0005
       rect:
         serializedVersion: 2
         x: 611
-        y: 236
-        width: 159
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 237
+        width: 158
+        height: 174
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9536,57 +9452,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: waterfall0006
-      rect:
-        serializedVersion: 2
-        x: 772
-        y: 84
-        width: 159
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c505410000000000800000000000000
-      internalID: 21300678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: waterfall0007
-      rect:
-        serializedVersion: 2
-        x: 772
-        y: 84
-        width: 159
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c505410000000000800000000000000
-      internalID: 21300680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: waterfall0008
       rect:
         serializedVersion: 2
         x: 772
-        y: 84
-        width: 159
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 85
+        width: 158
+        height: 174
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9643,7 +9517,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 14dafb36fa6251a4dad5020f1ebe4864
     internalID: 0
     vertices: []
     indices: 

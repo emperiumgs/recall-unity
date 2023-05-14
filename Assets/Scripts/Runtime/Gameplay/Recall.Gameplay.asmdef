@@ -1,18 +1,17 @@
 {
-    "name": "Recall.Editor",
+    "name": "Recall.Gameplay",
     "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [
-        "Editor"
+    "references": [
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:86cc26284feb78849ab751e241df0117"
     ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [
-        "LEGACY_SLICER"
-    ],
+    "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
 }

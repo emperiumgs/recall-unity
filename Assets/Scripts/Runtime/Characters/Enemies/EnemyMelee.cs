@@ -62,9 +62,9 @@ public class EnemyMelee : Enemy
         }
 	}
 
-	protected override void OnDrawGizmos()
+	protected override void OnDrawGizmosSelected()
 	{
-		base.OnDrawGizmos();
+		base.OnDrawGizmosSelected();
 		Gizmos.DrawWireCube(transform.position + (Vector3)meleeRangePos, meleeRangeSize);
 	}
 }

@@ -38,7 +38,6 @@ public class Liss : MonoBehaviour, IDamageable, IBlockable
 	const int MAX_HEALTH = 100;
 
 	JumpingStates js;
-	CameraController cam;
 	SpriteRenderer sr;
 	SpriteRenderer knifeSr;
     BoxCollider2D col,
@@ -85,8 +84,6 @@ public class Liss : MonoBehaviour, IDamageable, IBlockable
 	void Awake()
 	{
 		instance = this;
-		cam = Camera.main.GetComponent<CameraController>();
-		cam.target = transform;
 		sr = GetComponent<SpriteRenderer>();
 		rb = GetComponent<Rigidbody2D>();
 		col = GetComponent<BoxCollider2D>();
@@ -250,7 +247,6 @@ public class Liss : MonoBehaviour, IDamageable, IBlockable
 			facingRight = false;
 			sr.flipX = true;
 			knifeSr.flipX = true;
-			cam.SwitchDirection();
 			Vector3 pos = focusParticles.transform.localPosition;
 			pos.x *= -1;
 			focusParticles.transform.localPosition = pos;
@@ -262,7 +258,6 @@ public class Liss : MonoBehaviour, IDamageable, IBlockable
 			facingRight = true;
 			sr.flipX = false;
 			knifeSr.flipX = false;
-			cam.SwitchDirection();
 			Vector3 pos = focusParticles.transform.localPosition;
 			pos.x *= -1;
 			focusParticles.transform.localPosition = pos;
