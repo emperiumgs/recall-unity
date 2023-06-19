@@ -46,6 +46,7 @@ namespace Recall.Gameplay
         readonly Collider2D[] _overlapCache = new Collider2D[1];
 
         CapsuleCollider2D _capsuleCollider;
+        CharacterCombat _characterCombat;
         Rigidbody2D _rigidbody;
         float _horizontalInput;
         bool _wasGroundedLastFrame;
@@ -57,7 +58,11 @@ namespace Recall.Gameplay
         void Awake()
         {
             _capsuleCollider = GetComponent<CapsuleCollider2D>();
+            _characterCombat = GetComponent<CharacterCombat>();
             _rigidbody = GetComponent<Rigidbody2D>();
+
+            _characterCombat.ComboAttackStarted += OnComboAttackStarted;
+            _characterCombat.ComboEnded += OnComboEnded;
         }
 
         void FixedUpdate()
@@ -126,7 +131,23 @@ namespace Recall.Gameplay
         {
             _horizontalInput = 0;
         }
-        
+
+        void OnComboAttackStarted(int comboIndex)
+        {
+            if (comboIndex != 1)
+                return;
+
+            _rigidbody.isKinematic = true;
+            _rigidbody.velocity = Vector2.zero;
+            enabled = false;
+        }
+
+        void OnComboEnded()
+        {
+            enabled = true;
+            _rigidbody.isKinematic = false;
+        }
+
         GroundDetectInfo GetGroundDetectInfo()
         {
             var radius = (_groundDetectRadiusOffset + _capsuleCollider.size.x) / 2;

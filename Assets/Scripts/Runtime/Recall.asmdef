@@ -1,3 +1,16 @@
 {
-	"name": "Recall"
+    "name": "Recall",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a4d55246abf62ef4ab57ef6560e4f118"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
