@@ -83,7 +83,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 	{
 		health = 0;
 		anim.SetTrigger("death");
-        gameObject.layer = deathLayer;
+        //gameObject.layer = deathLayer;
         StartCoroutine(Death());
 		currentState = null;
 	}

@@ -48,6 +48,7 @@ namespace Recall.Gameplay
         CapsuleCollider2D _capsuleCollider;
         CharacterCombat _characterCombat;
         Rigidbody2D _rigidbody;
+        float _speedMultiplier = 1;
         float _horizontalInput;
         bool _wasGroundedLastFrame;
         bool _wasFlippedLastFrame;
@@ -63,6 +64,7 @@ namespace Recall.Gameplay
 
             _characterCombat.ComboAttackStarted += OnComboAttackStarted;
             _characterCombat.ComboEnded += OnComboEnded;
+            _characterCombat.DefendingStateChanged += OnDefendingStateChanged;
         }
 
         void FixedUpdate()
@@ -70,7 +72,7 @@ namespace Recall.Gameplay
             ValidateGroundedState();
             ValidateFlippedState();
 
-            var velocity = new Vector2(_horizontalInput * _speed, _rigidbody.velocity.y);
+            var velocity = new Vector2(_horizontalInput * _speed * _speedMultiplier, _rigidbody.velocity.y);
 
             if (_isGrounded)
                 FixedGroundedMove(ref velocity);
@@ -146,6 +148,11 @@ namespace Recall.Gameplay
         {
             enabled = true;
             _rigidbody.isKinematic = false;
+        }
+
+        void OnDefendingStateChanged(bool isDefending)
+        {
+            _speedMultiplier = isDefending ? 0 : 1;
         }
 
         GroundDetectInfo GetGroundDetectInfo()

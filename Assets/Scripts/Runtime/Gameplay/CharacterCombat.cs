@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Recall.Gameplay
@@ -8,16 +9,19 @@ namespace Recall.Gameplay
         Inactive,
         Ready,
         Attacking,
-        Defending
+        Defending,
+        CoolingDown
     }
 
     [DisallowMultipleComponent]
-    public class CharacterCombat : MonoBehaviour
+    public class CharacterCombat : MonoBehaviour, IBlockable
     {
         public event Action<CombatState> StateChanged;
         public event Action<bool> DefendingStateChanged;
         public event Action<int> ComboAttackStarted;
+        public event Action BlockedAttack;
         public event Action ComboEnded;
+        public event Action EnemyHit;
 
         public CombatState State => _state;
 
@@ -33,10 +37,13 @@ namespace Recall.Gameplay
         Vector2 _attackOffsetPosition;
         [SerializeField]
         Vector2 _attackDetectionArea;
+        [SerializeField, Range(.1f, 1)]
+        float _attackCooldown = .5f;
 
         CombatState _state = CombatState.Ready;
         CharacterController2D _characterController;
         Collider2D[] _colliderCache = new Collider2D[3];
+        Coroutine _cooldownRoutine;
         int _comboIndex;
 
         void Awake()
@@ -49,8 +56,6 @@ namespace Recall.Gameplay
             if (_state != CombatState.Ready)
                 return;
 
-            //source.PlayOneShot(Random.Range(0, 2) > 0 ? atkA : atkB);
-
             _knivesRenderer.enabled = false;
             SetCombatState(CombatState.Attacking);
             ComboAttackStarted?.Invoke(++_comboIndex);
@@ -58,7 +63,7 @@ namespace Recall.Gameplay
 
         public void SetDefending(bool value)
         {
-            if (value && _state == CombatState.Ready || _state == CombatState.Attacking)
+            if (value && _state == CombatState.Ready || _state == CombatState.Attacking || _state == CombatState.CoolingDown)
             {
                 if (_comboIndex > 0)
                     ClearAttack();
@@ -74,9 +79,14 @@ namespace Recall.Gameplay
                 _shieldObject.SetActive(false);
                 _knivesRenderer.enabled = true;
 
-                SetCombatState(CombatState.Ready);
+                SetCombatState(_cooldownRoutine == null ? CombatState.Ready : CombatState.CoolingDown);
                 DefendingStateChanged?.Invoke(value);
             }
+        }
+
+        public void Block()
+        {
+            BlockedAttack?.Invoke();
         }
 
         void DealDamage()
@@ -90,10 +100,10 @@ namespace Recall.Gameplay
             IDamageable damageable;
             foreach (Collider2D hit in _colliderCache)
             {
-                if (hit.TryGetComponent(out damageable))
+                if (hit && hit.TryGetComponent(out damageable))
                 {
                     damageable.TakeDamage(_comboDamageList[_comboIndex - 1]);
-                    //source.PlayOneShot(atkHit);
+                    EnemyHit?.Invoke();
                 }
             }
         }
@@ -112,9 +122,25 @@ namespace Recall.Gameplay
         void ClearAttack()
         {
             _comboIndex = 0;
-            EnableAttack();
             _knivesRenderer.enabled = true;
+
+            if (_cooldownRoutine is not null)
+                StopCoroutine(_cooldownRoutine);
+            _cooldownRoutine = Cooldown();
+
             ComboEnded?.Invoke();
+        }
+
+        Coroutine Cooldown()
+        {
+            return StartCoroutine(cooldownRoutine());
+            IEnumerator cooldownRoutine()
+            {
+                SetCombatState(CombatState.CoolingDown);
+                yield return new WaitForSeconds(_attackCooldown);
+                EnableAttack();
+                _cooldownRoutine = null;
+            }
         }
 
         Vector2 GetAttackBoxCenter()
