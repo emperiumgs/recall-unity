@@ -32,6 +32,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     
     int deathLayer;
 
+    public event System.Action<int> DamageTaken;
+
     protected virtual void Awake()
 	{
 		anim = GetComponent<Animator>();

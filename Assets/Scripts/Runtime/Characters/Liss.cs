@@ -13,8 +13,9 @@ public class Liss : MonoBehaviour, IDamageable, IBlockable
 
 	public delegate void ToggleFocusEvent(bool value);
 	public static event ToggleFocusEvent ToggleFocusHandler;
+    public event System.Action<int> DamageTaken;
 
-	public static Liss instance { get; private set; }
+    public static Liss instance { get; private set; }
 
 	[Range(1, 10)]
 	public float speed,
