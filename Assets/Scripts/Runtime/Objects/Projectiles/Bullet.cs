@@ -1,19 +1,32 @@
 using UnityEngine;
-using System.Collections;
 
 public class Bullet : Projectile
 {
-	[HideInInspector]
-	public int damage;
+    int _shieldLayer;
 
-	void OnCollisionEnter2D(Collision2D hit)
-	{
-		IDamageable dmg = hit.collider.GetComponent<IDamageable>();
-        IBlockable block = hit.collider.GetComponentInParent<IBlockable>();
-        if (dmg != null)
-            dmg.TakeDamage(damage);
-        else if (block != null)
-            block.Block();        
-		Restore();
-	}
+    [HideInInspector]
+    public int damage;
+
+    void Awake()
+    {
+        _shieldLayer = LayerMask.NameToLayer("Shield");
+    }
+
+    void OnCollisionEnter2D(Collision2D hit)
+    {
+        Restore();
+
+        if (hit.collider.gameObject.layer == _shieldLayer)
+        {
+            var blockable = hit.collider.GetComponentInParent<IBlockable>();
+            if (blockable != null)
+            {
+                blockable.Block();
+                return;
+            }
+        }
+
+        if (hit.collider.TryGetComponent<IDamageable>(out var damageable))
+            damageable.TakeDamage(damage);
+    }
 }

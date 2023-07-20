@@ -1,10 +1,10 @@
 using Cinemachine;
+using Recall.Gameplay.Interfaces;
 using UnityEngine;
 
 namespace Recall.Gameplay
 {
     [DisallowMultipleComponent]
-    [RequireComponent(typeof(CharacterController2D))]
     public class CharacterFlip : MonoBehaviour
     {
         [SerializeField]
@@ -14,12 +14,10 @@ namespace Recall.Gameplay
         [SerializeField]
         CinemachineVirtualCamera _virtualCamera;
 
-        CharacterController2D _characterController;
-
         void Awake()
         {
-            _characterController = GetComponent<CharacterController2D>();
-            _characterController.FlippedStateChanged += OnFlip;
+            if (TryGetComponent<ISpriteFlippable>(out var flippable))
+                flippable.FlippedStateChanged += OnFlip;
         }
 
         void OnFlip(bool isFlipped)

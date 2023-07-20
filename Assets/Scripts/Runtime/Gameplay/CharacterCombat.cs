@@ -1,3 +1,4 @@
+using Recall.Gameplay.Interfaces;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -41,14 +42,23 @@ namespace Recall.Gameplay
         float _attackCooldown = .5f;
 
         CombatState _state = CombatState.Ready;
-        CharacterController2D _characterController;
+        ISpriteFlippable _flippable;
         Collider2D[] _colliderCache = new Collider2D[3];
         Coroutine _cooldownRoutine;
         int _comboIndex;
 
         void Awake()
         {
-            _characterController = GetComponent<CharacterController2D>();
+            _flippable = GetComponent<ISpriteFlippable>();
+
+            if (TryGetComponent<IDamageable>(out var damageable))
+                damageable.DamageTaken += OnDamageTaken;
+
+            if (TryGetComponent<IKillable>(out var killable))
+                killable.Killed += ResetCombatState;
+
+            if (TryGetComponent<IRespawnable>(out var respawnable))
+                respawnable.RespawnedAt += OnRespawned;
         }
 
         public void Attack()
@@ -56,7 +66,7 @@ namespace Recall.Gameplay
             if (_state != CombatState.Ready)
                 return;
 
-            _knivesRenderer.enabled = false;
+            SetKnifeRenderer(false);
             SetCombatState(CombatState.Attacking);
             ComboAttackStarted?.Invoke(++_comboIndex);
         }
@@ -69,7 +79,7 @@ namespace Recall.Gameplay
                     ClearAttack();
 
                 _shieldObject.SetActive(true);
-                _knivesRenderer.enabled = false;
+                SetKnifeRenderer(false);
 
                 SetCombatState(CombatState.Defending);
                 DefendingStateChanged?.Invoke(value);
@@ -77,7 +87,7 @@ namespace Recall.Gameplay
             else if (!value)
             {
                 _shieldObject.SetActive(false);
-                _knivesRenderer.enabled = true;
+                SetKnifeRenderer(true);
 
                 SetCombatState(_cooldownRoutine == null ? CombatState.Ready : CombatState.CoolingDown);
                 DefendingStateChanged?.Invoke(value);
@@ -88,6 +98,8 @@ namespace Recall.Gameplay
         {
             BlockedAttack?.Invoke();
         }
+
+        public void DisableKnifeRenderer() => SetKnifeRenderer(false);
 
         void DealDamage()
         {
@@ -108,6 +120,11 @@ namespace Recall.Gameplay
             }
         }
 
+        void SetKnifeRenderer(bool value)
+        {
+            _knivesRenderer.enabled = value;
+        }
+
         void EnableAttack()
         {
             SetCombatState(CombatState.Ready);
@@ -122,13 +139,28 @@ namespace Recall.Gameplay
         void ClearAttack()
         {
             _comboIndex = 0;
-            _knivesRenderer.enabled = true;
+            SetKnifeRenderer(true);
 
             if (_cooldownRoutine is not null)
                 StopCoroutine(_cooldownRoutine);
             _cooldownRoutine = Cooldown();
 
             ComboEnded?.Invoke();
+        }
+
+        void ResetCombatState()
+        {
+            if (_state == CombatState.Attacking)
+                ClearAttack();
+            else if (_state == CombatState.Defending)
+                SetDefending(false);
+        }
+
+        void OnDamageTaken(int damage) => ResetCombatState();
+
+        void OnRespawned(Vector2 position)
+        {
+            SetKnifeRenderer(true);
         }
 
         Coroutine Cooldown()
@@ -146,7 +178,7 @@ namespace Recall.Gameplay
         Vector2 GetAttackBoxCenter()
         {
             var offsetPosition = _attackOffsetPosition;
-            if (_characterController.IsFlipped)
+            if (_flippable.IsFlipped)
                 offsetPosition.x *= -1;
             return (Vector2)transform.position + offsetPosition;
         }

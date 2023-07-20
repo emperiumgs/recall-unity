@@ -16,16 +16,25 @@ namespace Recall.Gameplay
         AudioClip _hitSfx;
 
         CharacterCombat _combat;
+        CharacterHealth _health;
         AudioSource _audioSource;
 
         void Awake()
         {
             _audioSource = GetComponent<AudioSource>();
             _combat = GetComponent<CharacterCombat>();
+            _health = GetComponent<CharacterHealth>();
 
             _combat.BlockedAttack += OnBlockedAttack;
             _combat.EnemyHit += OnEnemyHit;
             _combat.ComboAttackStarted += OnAttack;
+
+            _health.DamageTaken += OnDamageTaken;
+        }
+
+        void OnDamageTaken(int damage)
+        {
+            _audioSource.PlayOneShot(_takeDamageSfx);
         }
 
         void OnBlockedAttack()

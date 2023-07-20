@@ -1,3 +1,4 @@
+using Recall.Gameplay.Interfaces;
 using UnityEngine;
 
 namespace Recall.Gameplay
@@ -14,6 +15,18 @@ namespace Recall.Gameplay
             _characterController = GetComponent<CharacterController2D>();
             _characterAnimator = GetComponent<CharacterAnimator>();
             _characterCombat = GetComponent<CharacterCombat>();
+
+            if (TryGetComponent<IDamageable>(out var damageable))
+            {
+                damageable.DamageTaken += OnDamageTaken;
+                damageable.Recovered += OnRecovered;
+            }
+
+            if (TryGetComponent<IKillable>(out var killable))
+                killable.Killed += OnDeath;
+
+            if (TryGetComponent<IRespawnable>(out var respawnable))
+                respawnable.RespawnedAt += OnRespawned;
         }
 
         void Update()
@@ -29,6 +42,31 @@ namespace Recall.Gameplay
             var horizontal = Input.GetAxis("Horizontal");
             _characterController.SetInputs(horizontal, Input.GetButtonDown("Jump"));
             _characterAnimator.SetHorizontalInput(horizontal);
+        }
+
+        public void SetInputActive(bool value)
+        {
+            enabled = value;
+        }
+
+        void OnRespawned(Vector2 position)
+        {
+            SetInputActive(true);
+        }
+
+        void OnDamageTaken(int damage)
+        {
+            SetInputActive(false);
+        }
+
+        void OnDeath()
+        {
+            SetInputActive(false);
+        }
+
+        void OnRecovered()
+        {
+            SetInputActive(true);
         }
     }
 }

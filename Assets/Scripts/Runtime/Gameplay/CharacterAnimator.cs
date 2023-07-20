@@ -1,4 +1,6 @@
+using Recall.Gameplay.Interfaces;
 using UnityEngine;
+using UnityEngine.Windows;
 
 namespace Recall.Gameplay
 {
@@ -13,6 +15,8 @@ namespace Recall.Gameplay
         int _triggerHash;
         int _attackHash;
         int _shieldHash;
+        int _damageHash;
+        int _deathHash;
         int _jumpHash;
 
         void Awake()
@@ -26,18 +30,49 @@ namespace Recall.Gameplay
             _characterCombat.ComboAttackStarted += OnComboAttackStarted;
             _characterCombat.ComboEnded += OnComboEnded;
 
+            if (TryGetComponent<IDamageable>(out var damageable))
+                damageable.DamageTaken += OnDamageTaken;
+
+            if (TryGetComponent<IKillable>(out var killable))
+                killable.Killed += OnDeath;
+
+            if (TryGetComponent<IRespawnable>(out var respawnable))
+                respawnable.RespawnedAt += OnRespawned;
+
             _animator = GetComponent<Animator>();
 
             _walkingHash = Animator.StringToHash("walking");
             _triggerHash = Animator.StringToHash("trigger");
             _shieldHash = Animator.StringToHash("shield");
+            _damageHash = Animator.StringToHash("damage");
             _attackHash = Animator.StringToHash("atkNum");
+            _deathHash = Animator.StringToHash("death");
             _jumpHash = Animator.StringToHash("jump");
         }
 
         public void SetHorizontalInput(float input)
         {
             _animator.SetBool(_walkingHash, input != 0);
+        }
+
+        void OnDamageTaken(int damage)
+        {
+            _animator.SetTrigger(_damageHash);
+        }
+
+        void OnRespawned(Vector2 position)
+        {
+            _animator.SetBool(_deathHash, false);
+        }
+
+        void OnDeath()
+        {
+            _animator.SetBool(_walkingHash, false);
+            _animator.SetBool(_shieldHash, false);
+            _animator.SetBool(_jumpHash, false);
+            _animator.SetBool(_deathHash, true);
+            _animator.SetInteger(_attackHash, 0);
+            _animator.SetTrigger(_triggerHash);
         }
 
         void OnJump()

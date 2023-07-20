@@ -1,3 +1,4 @@
+using Recall.Gameplay.Interfaces;
 using System;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ namespace Recall.Gameplay
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Rigidbody2D), typeof(CapsuleCollider2D))]
-    public class CharacterController2D : MonoBehaviour
+    public class CharacterController2D : MonoBehaviour, ISpriteFlippable
     {
         struct GroundDetectInfo
         {
@@ -65,12 +66,18 @@ namespace Recall.Gameplay
             _characterCombat.ComboAttackStarted += OnComboAttackStarted;
             _characterCombat.ComboEnded += OnComboEnded;
             _characterCombat.DefendingStateChanged += OnDefendingStateChanged;
+
+            if (TryGetComponent<IRespawnable>(out var respawnable))
+                respawnable.RespawnedAt += OnRespawned;
+
+            if (TryGetComponent<IKillable>(out var killable))
+                killable.Killed += OnDeath;
         }
 
         void FixedUpdate()
         {
             ValidateGroundedState();
-            ValidateFlippedState();
+            ValidateFlippedState(_horizontalInput);
 
             var velocity = new Vector2(_horizontalInput * _speed * _speedMultiplier, _rigidbody.velocity.y);
 
@@ -88,6 +95,11 @@ namespace Recall.Gameplay
         {
             _horizontalInput = horizontalInput;
             _jumpInput = jumpInput || _jumpInput;
+        }
+
+        public void WarpToPosition(Vector3 position)
+        { 
+            _rigidbody.MovePosition(position);
         }
         
         void FixedGroundedMove(ref Vector2 velocity)
@@ -118,10 +130,10 @@ namespace Recall.Gameplay
             _wasGroundedLastFrame = _isGrounded;
         }
 
-        void ValidateFlippedState()
+        void ValidateFlippedState(float input)
         {
-            if (_horizontalInput != 0)
-                _isFlipped = _horizontalInput < 0;
+            if (input != 0)
+                _isFlipped = input < 0;
 
             if (_wasFlippedLastFrame != _isFlipped)
                 FlippedStateChanged?.Invoke(_isFlipped);
@@ -132,6 +144,17 @@ namespace Recall.Gameplay
         void ResetInputs()
         {
             _horizontalInput = 0;
+        }
+
+        void OnRespawned(Vector2 position)
+        {
+            WarpToPosition(position);
+            ValidateFlippedState(1);
+        }
+
+        void OnDeath()
+        {
+            ResetInputs();
         }
 
         void OnComboAttackStarted(int comboIndex)

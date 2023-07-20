@@ -14,6 +14,7 @@ public class Liss : MonoBehaviour, IDamageable, IBlockable
 	public delegate void ToggleFocusEvent(bool value);
 	public static event ToggleFocusEvent ToggleFocusHandler;
     public event System.Action<int> DamageTaken;
+    public event System.Action Recovered;
 
     public static Liss instance { get; private set; }
 
