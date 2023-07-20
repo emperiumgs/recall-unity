@@ -9,12 +9,16 @@ namespace Recall.Gameplay
         CharacterController2D _characterController;
         CharacterAnimator _characterAnimator;
         CharacterCombat _characterCombat;
+        FocusBehavior _focus;
+        bool _inFocus;
 
         void Awake()
         {
             _characterController = GetComponent<CharacterController2D>();
             _characterAnimator = GetComponent<CharacterAnimator>();
             _characterCombat = GetComponent<CharacterCombat>();
+            _focus = GetComponent<FocusBehavior>();
+            _focus.Focused += OnFocused;
 
             if (TryGetComponent<IDamageable>(out var damageable))
             {
@@ -34,6 +38,12 @@ namespace Recall.Gameplay
 
         void Update()
         {
+            if (Input.GetButtonDown("Focus"))
+                _focus.ToggleFocus();
+
+            if (_inFocus)
+                return;
+
             if (Input.GetButtonDown("Shield"))
                 _characterCombat.SetDefending(true);
             else if (Input.GetButtonUp("Shield"))
@@ -51,7 +61,10 @@ namespace Recall.Gameplay
         {
             enabled = value;
             if (!value)
+            {
                 _characterController.SetInputs(0, false);
+                _inFocus = false;
+            }
         }
 
         void OnRespawned(Vector2 position)
@@ -62,6 +75,11 @@ namespace Recall.Gameplay
         void OnDamageTaken(int damage)
         {
             SetInputActive(false);
+        }
+
+        void OnFocused(bool isFocused)
+        {
+            _inFocus = isFocused;
         }
 
         void OnDeath()

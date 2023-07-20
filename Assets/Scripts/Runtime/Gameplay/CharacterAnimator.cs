@@ -1,5 +1,4 @@
 using Recall.Gameplay.Interfaces;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace Recall.Gameplay
@@ -16,6 +15,7 @@ namespace Recall.Gameplay
         int _attackHash;
         int _shieldHash;
         int _damageHash;
+        int _focusHash;
         int _deathHash;
         int _oozeHash;
         int _jumpHash;
@@ -30,6 +30,9 @@ namespace Recall.Gameplay
             _characterCombat.DefendingStateChanged += OnDefendingStateChanged;
             _characterCombat.ComboAttackStarted += OnComboAttackStarted;
             _characterCombat.ComboEnded += OnComboEnded;
+
+            if (TryGetComponent<FocusBehavior>(out var focus))
+                focus.Focused += OnFocused;
 
             if (TryGetComponent<IDamageable>(out var damageable))
                 damageable.DamageTaken += OnDamageTaken;
@@ -50,6 +53,7 @@ namespace Recall.Gameplay
             _shieldHash = Animator.StringToHash("shield");
             _damageHash = Animator.StringToHash("damage");
             _attackHash = Animator.StringToHash("atkNum");
+            _focusHash = Animator.StringToHash("focus");
             _deathHash = Animator.StringToHash("death");
             _oozeHash = Animator.StringToHash("ooze");
             _jumpHash = Animator.StringToHash("jump");
@@ -74,6 +78,10 @@ namespace Recall.Gameplay
 
         void OnDamageTaken(int damage)
         {
+            ResetNavigationParams();
+            ResetCombatParams();
+            _animator.SetBool(_focusHash, false);
+
             _animator.SetTrigger(_damageHash);
         }
 
@@ -82,10 +90,23 @@ namespace Recall.Gameplay
             _animator.SetBool(_deathHash, false);
         }
 
+        void OnFocused(bool isFocused)
+        {
+            if (isFocused)
+            {
+                ResetNavigationParams();
+                ResetCombatParams();
+                _animator.SetTrigger(_triggerHash);
+            }
+
+            _animator.SetBool(_focusHash, isFocused);
+        }
+
         void OnDeath()
         {
             ResetNavigationParams();
             ResetCombatParams();
+            _animator.SetBool(_focusHash, false);
 
             _animator.SetBool(_deathHash, true);
             _animator.SetTrigger(_triggerHash);
@@ -95,6 +116,7 @@ namespace Recall.Gameplay
         {
             ResetNavigationParams();
             ResetCombatParams();
+            _animator.SetBool(_focusHash, false);
 
             _animator.SetBool(_oozeHash, isOozed);
         }
