@@ -27,6 +27,9 @@ namespace Recall.Gameplay
 
             if (TryGetComponent<IRespawnable>(out var respawnable))
                 respawnable.RespawnedAt += OnRespawned;
+
+            if (TryGetComponent<IOozable>(out var oozable))
+                oozable.Oozed += OnOozed;
         }
 
         void Update()
@@ -47,6 +50,8 @@ namespace Recall.Gameplay
         public void SetInputActive(bool value)
         {
             enabled = value;
+            if (!value)
+                _characterController.SetInputs(0, false);
         }
 
         void OnRespawned(Vector2 position)
@@ -67,6 +72,11 @@ namespace Recall.Gameplay
         void OnRecovered()
         {
             SetInputActive(true);
+        }
+
+        void OnOozed(bool isOozed)
+        {
+            SetInputActive(!isOozed);
         }
     }
 }

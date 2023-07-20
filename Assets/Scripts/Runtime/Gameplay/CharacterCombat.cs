@@ -59,6 +59,9 @@ namespace Recall.Gameplay
 
             if (TryGetComponent<IRespawnable>(out var respawnable))
                 respawnable.RespawnedAt += OnRespawned;
+
+            if (TryGetComponent<IOozable>(out var oozable))
+                oozable.Oozed += OnOozed;
         }
 
         public void Attack()
@@ -161,6 +164,12 @@ namespace Recall.Gameplay
         void OnRespawned(Vector2 position)
         {
             SetKnifeRenderer(true);
+        }
+
+        void OnOozed(bool isOozed)
+        {
+            if (isOozed)
+                ResetCombatState();
         }
 
         Coroutine Cooldown()

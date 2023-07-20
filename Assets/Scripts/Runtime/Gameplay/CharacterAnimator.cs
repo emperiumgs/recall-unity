@@ -1,6 +1,6 @@
 using Recall.Gameplay.Interfaces;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Windows;
 
 namespace Recall.Gameplay
 {
@@ -17,6 +17,7 @@ namespace Recall.Gameplay
         int _shieldHash;
         int _damageHash;
         int _deathHash;
+        int _oozeHash;
         int _jumpHash;
 
         void Awake()
@@ -39,6 +40,9 @@ namespace Recall.Gameplay
             if (TryGetComponent<IRespawnable>(out var respawnable))
                 respawnable.RespawnedAt += OnRespawned;
 
+            if (TryGetComponent<IOozable>(out var oozable))
+                oozable.Oozed += OnOozed;
+
             _animator = GetComponent<Animator>();
 
             _walkingHash = Animator.StringToHash("walking");
@@ -47,12 +51,25 @@ namespace Recall.Gameplay
             _damageHash = Animator.StringToHash("damage");
             _attackHash = Animator.StringToHash("atkNum");
             _deathHash = Animator.StringToHash("death");
+            _oozeHash = Animator.StringToHash("ooze");
             _jumpHash = Animator.StringToHash("jump");
         }
 
         public void SetHorizontalInput(float input)
         {
             _animator.SetBool(_walkingHash, input != 0);
+        }
+
+        void ResetNavigationParams()
+        {
+            _animator.SetBool(_walkingHash, false);
+            _animator.SetBool(_jumpHash, false);
+        }
+
+        void ResetCombatParams()
+        {
+            _animator.SetBool(_shieldHash, false);
+            _animator.SetInteger(_attackHash, 0);
         }
 
         void OnDamageTaken(int damage)
@@ -67,12 +84,19 @@ namespace Recall.Gameplay
 
         void OnDeath()
         {
-            _animator.SetBool(_walkingHash, false);
-            _animator.SetBool(_shieldHash, false);
-            _animator.SetBool(_jumpHash, false);
+            ResetNavigationParams();
+            ResetCombatParams();
+
             _animator.SetBool(_deathHash, true);
-            _animator.SetInteger(_attackHash, 0);
             _animator.SetTrigger(_triggerHash);
+        }
+
+        void OnOozed(bool isOozed)
+        {
+            ResetNavigationParams();
+            ResetCombatParams();
+
+            _animator.SetBool(_oozeHash, isOozed);
         }
 
         void OnJump()

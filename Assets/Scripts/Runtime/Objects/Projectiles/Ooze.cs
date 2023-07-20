@@ -1,24 +1,20 @@
 using UnityEngine;
-using System.Collections;
+using Recall.Gameplay.Interfaces;
+using MyGameDevTools.Extensions;
 
 public class Ooze : Projectile
 {
-    const string TARGET_TAG = "Player";
-    
-    bool bounced;
-    int shieldLayer;
+    [SerializeField]
+    LayerMask _hitMask;
 
-    void Awake()
-    {
-        shieldLayer = LayerMask.NameToLayer("Shield");
-    }
+    bool bounced;
 
 	void OnCollisionEnter2D(Collision2D hit)
 	{
-        if (hit.collider.tag == TARGET_TAG || hit.collider.gameObject.layer == shieldLayer)
+        if (_hitMask.HasLayer(hit.collider.gameObject.layer))
         {
-            hit.collider.GetComponentInParent<Liss>().Ooze();
             Restore();
+            hit.collider.GetComponentInParent<IOozable>()?.ApplyOoze();
             return;
         }
 

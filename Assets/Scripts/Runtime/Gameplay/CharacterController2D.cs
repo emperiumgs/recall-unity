@@ -69,9 +69,6 @@ namespace Recall.Gameplay
 
             if (TryGetComponent<IRespawnable>(out var respawnable))
                 respawnable.RespawnedAt += OnRespawned;
-
-            if (TryGetComponent<IKillable>(out var killable))
-                killable.Killed += OnDeath;
         }
 
         void FixedUpdate()
@@ -150,11 +147,6 @@ namespace Recall.Gameplay
         {
             WarpToPosition(position);
             ValidateFlippedState(1);
-        }
-
-        void OnDeath()
-        {
-            ResetInputs();
         }
 
         void OnComboAttackStarted(int comboIndex)

@@ -7,6 +7,8 @@ namespace Recall.Gameplay.Interfaces
     {
         event Action<Vector2> RespawnedAt;
 
+        void SetRespawnPosition(Vector2 respawnPosition);
+
         void Respawn();
     }
 }
