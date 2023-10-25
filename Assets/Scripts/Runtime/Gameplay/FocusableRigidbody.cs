@@ -1,3 +1,4 @@
+using System;
 using Recall.Gameplay.Interfaces;
 using UnityEngine;
 
@@ -7,7 +8,12 @@ namespace Recall.Gameplay
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class FocusableRigidbody : MonoBehaviour, IFocusable
     {
+#pragma warning disable 67
+        public event Action Disabled;
+#pragma warning restore 67
+
         public Collider2D Collider { get; private set; }
+        public bool IsDraggable => true;
 
         Rigidbody2D _rigidbody;
 

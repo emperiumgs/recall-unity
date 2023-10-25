@@ -1,10 +1,14 @@
+using System;
 using UnityEngine;
 
 namespace Recall.Gameplay.Interfaces
 {
     public interface IFocusable
     {
+        event Action Disabled;
+
         Collider2D Collider { get; }
+        bool IsDraggable { get; }
 
         void OnHoverStart();
 

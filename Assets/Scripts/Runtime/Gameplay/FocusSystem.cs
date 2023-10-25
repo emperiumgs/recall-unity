@@ -12,18 +12,21 @@ namespace Recall.Gameplay
         public bool FocusActive => enabled;
 
         [SerializeField]
+        GameObject _focusCursorPrefab;
+        [SerializeField]
         LayerMask _interactableMask;
 
         IFocusable _focusableTarget;
         Collider2D[] _circleCastCache = new Collider2D[1];
-        GameObject _focusCursor;
+        FocusCursor _focusCursor;
         Camera _mainCamera;
         Vector2 _lastInputPosition;
         bool _isSelecting;
 
         void Awake()
         {
-            _focusCursor = new GameObject("Cursor_Focus");
+            _focusCursor = Instantiate(_focusCursorPrefab).GetComponent<FocusCursor>();
+            _focusCursor.gameObject.SetActive(false);
             _mainCamera = Camera.main;
         }
 
@@ -33,6 +36,9 @@ namespace Recall.Gameplay
                 return;
 
             enabled = value;
+            _focusCursor.SetPosition(_mainCamera.ViewportToWorldPoint(Vector2.one / 2));
+            _focusCursor.SetState(FocusCursor.CursorState.Free);
+            _focusCursor.gameObject.SetActive(value);
             FocusModeChanged?.Invoke(value);
         }
 
@@ -41,18 +47,17 @@ namespace Recall.Gameplay
             bool hasTarget = _focusableTarget is not null;
 
             // Set focus cursor position
-            var convertedPosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            var inputPosition = new Vector2(convertedPosition.x, convertedPosition.y);
+            Vector2 inputPosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
             if (hasTarget && _isSelecting)
             {
-                _focusCursor.transform.position = _focusableTarget.Collider.bounds.center;
+                _focusCursor.SetPosition(_focusableTarget.Collider.bounds.center);
                 // Release
                 if (Input.GetButtonUp("Fire1"))
                 {
                     _focusableTarget.OnUnselect();
                     _isSelecting = false;
-                    // display feedback on cursor
+                    _focusCursor.SetState(FocusCursor.CursorState.Hovering);
                     return;
                 }
 
@@ -62,7 +67,7 @@ namespace Recall.Gameplay
             }
             else
             {
-                _focusCursor.transform.position = inputPosition;
+                _focusCursor.SetPosition(inputPosition);
                 // Perform raycasts
                 if (Physics2D.OverlapCircleNonAlloc(inputPosition, .1f, _circleCastCache, _interactableMask) > 0)
                 {
@@ -74,19 +79,19 @@ namespace Recall.Gameplay
                         focusable.OnSelect();
                         _isSelecting = true;
                         _lastInputPosition = inputPosition;
-                        // display feedback on cursor
+                        _focusCursor.SetState(FocusCursor.CursorState.Selecting);
                         return;
                     }
 
                     focusable.OnHoverStart();
                     _focusableTarget = focusable;
-                    // display feedback on cursor
+                    _focusCursor.SetState(FocusCursor.CursorState.Hovering);
                 }
                 else if (hasTarget)
                 {
                     _focusableTarget.OnHoverEnd();
                     _focusableTarget = null;
-                    // display feedback on cursor
+                    _focusCursor.SetState(FocusCursor.CursorState.Free);
                 }
             }
         }
