@@ -1,30 +1,28 @@
 using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Recall.Gameplay
 {
+    [DisallowMultipleComponent]
     public class FocusBehavior : MonoBehaviour
     {
         public event Action<bool> Focused;
 
-        Physics2DRaycaster _raycaster;
-        bool _focused;
+        FocusSystem _focusSystem;
 
         void Awake()
         {
-            _raycaster = FindAnyObjectByType<Physics2DRaycaster>();
+            _focusSystem = FindAnyObjectByType<FocusSystem>();
         }
 
         public void ToggleFocus()
         {
-            SetFocus(!_focused);
+            SetFocus(!_focusSystem.FocusActive);
         }
 
         public void SetFocus(bool value)
         {
-            _focused = value;
-            _raycaster.enabled = value;
+            _focusSystem.SetFocus(value);
             Focused?.Invoke(value);
         }
     }
