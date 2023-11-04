@@ -36,6 +36,7 @@ namespace Recall.Gameplay
                 return;
 
             enabled = value;
+            Cursor.visible = !value;
             _focusCursor.SetPosition(_mainCamera.ViewportToWorldPoint(Vector2.one / 2));
             _focusCursor.SetState(FocusCursor.CursorState.Free);
             _focusCursor.gameObject.SetActive(value);

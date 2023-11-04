@@ -8,11 +8,17 @@ namespace Recall.Gameplay
     {
         public event Action<bool> Focused;
 
+        [SerializeField]
+        GameObject _focusMask;
+
         FocusSystem _focusSystem;
 
         void Awake()
         {
             _focusSystem = FindAnyObjectByType<FocusSystem>();
+
+            _focusMask.transform.SetParent(null, true);
+            _focusMask.SetActive(false);
         }
 
         public void ToggleFocus()
@@ -23,6 +29,7 @@ namespace Recall.Gameplay
         public void SetFocus(bool value)
         {
             _focusSystem.SetFocus(value);
+            _focusMask.SetActive(value);
             Focused?.Invoke(value);
         }
     }
