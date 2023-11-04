@@ -15,12 +15,18 @@ namespace Recall.Gameplay
         public Collider2D Collider { get; private set; }
         public bool IsDraggable => true;
 
+        [SerializeField]
+        GameObject _particleFeedback;
+
         Rigidbody2D _rigidbody;
 
         void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             Collider = GetComponent<Collider2D>();
+
+            var system = FindAnyObjectByType<FocusSystem>();
+            system.FocusModeChanged += OnFocusModeChanged;
         }
 
         public void OnHoverStart()
@@ -35,6 +41,7 @@ namespace Recall.Gameplay
 
         public void OnSelect()
         {
+            _particleFeedback.SetActive(false);
             _rigidbody.gravityScale = 0;
             _rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             _rigidbody.sleepMode = RigidbodySleepMode2D.NeverSleep;
@@ -43,6 +50,7 @@ namespace Recall.Gameplay
 
         public void OnUnselect()
         {
+            _particleFeedback.SetActive(true);
             _rigidbody.gravityScale = 1;
             _rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
             _rigidbody.sleepMode = RigidbodySleepMode2D.StartAwake;
@@ -52,6 +60,11 @@ namespace Recall.Gameplay
         public void OnDrag(Vector2 delta, Vector2 finalPosition)
         {
             _rigidbody.MovePosition(finalPosition);
+        }
+
+        void OnFocusModeChanged(bool focusActive)
+        {
+            _particleFeedback.SetActive(focusActive);
         }
     }
 }

@@ -35,6 +35,18 @@ namespace Recall.Gameplay
             if (FocusActive == value)
                 return;
 
+            if (_focusableTarget is not null)
+            {
+                if (_isSelecting)
+                {
+                    _focusableTarget.OnUnselect();
+                    _isSelecting = false;
+                }
+
+                _focusableTarget.OnHoverEnd();
+                _focusableTarget = null;
+            }
+
             enabled = value;
             Cursor.visible = !value;
             _focusCursor.SetPosition(_mainCamera.ViewportToWorldPoint(Vector2.one / 2));

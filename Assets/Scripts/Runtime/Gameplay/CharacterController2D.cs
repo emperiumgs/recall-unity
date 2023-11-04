@@ -96,7 +96,7 @@ namespace Recall.Gameplay
 
         public void WarpToPosition(Vector3 position)
         { 
-            _rigidbody.MovePosition(position);
+            _rigidbody.position = position;
         }
         
         void FixedGroundedMove(ref Vector2 velocity)
