@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Recall.Gameplay.Interfaces;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace Recall.Gameplay
         [SerializeField]
         LayerMask _interactableMask;
 
+        List<IFocusable> _componentCache = new(2);
         IFocusable _focusableTarget;
         Collider2D[] _circleCastCache = new Collider2D[1];
         FocusCursor _focusCursor;
@@ -35,17 +37,7 @@ namespace Recall.Gameplay
             if (FocusActive == value)
                 return;
 
-            if (_focusableTarget is not null)
-            {
-                if (_isSelecting)
-                {
-                    _focusableTarget.OnUnselect();
-                    _isSelecting = false;
-                }
-
-                _focusableTarget.OnHoverEnd();
-                _focusableTarget = null;
-            }
+            ClearTarget();
 
             enabled = value;
             Cursor.visible = !value;
@@ -68,9 +60,7 @@ namespace Recall.Gameplay
                 // Release
                 if (Input.GetButtonUp("Fire1"))
                 {
-                    _focusableTarget.OnUnselect();
-                    _isSelecting = false;
-                    _focusCursor.SetState(FocusCursor.CursorState.Hovering);
+                    UnselectTarget();
                     return;
                 }
 
@@ -81,32 +71,80 @@ namespace Recall.Gameplay
             else
             {
                 _focusCursor.SetPosition(inputPosition);
-                // Perform raycasts
                 if (Physics2D.OverlapCircleNonAlloc(inputPosition, .1f, _circleCastCache, _interactableMask) > 0)
                 {
-                    if (!_circleCastCache[0].TryGetComponent<IFocusable>(out var focusable))
+                    if (!TryGetFocusable(_circleCastCache[0], out var focusable) || !focusable.Enabled)
                         return;
 
                     if (focusable == _focusableTarget && Input.GetButtonDown("Fire1"))
                     {
                         focusable.OnSelect();
-                        _isSelecting = true;
-                        _lastInputPosition = inputPosition;
-                        _focusCursor.SetState(FocusCursor.CursorState.Selecting);
+                        if (focusable.IsDraggable())
+                        {
+                            _isSelecting = true;
+                            _lastInputPosition = inputPosition;
+                            _focusCursor.SetState(FocusCursor.CursorState.Selecting);
+                        }
                         return;
                     }
 
-                    focusable.OnHoverStart();
-                    _focusableTarget = focusable;
-                    _focusCursor.SetState(FocusCursor.CursorState.Hovering);
+                    SetTarget(focusable);
                 }
                 else if (hasTarget)
+                    SetTarget(null);
+            }
+        }
+
+        void SetTarget(IFocusable focusable)
+        {
+            if (focusable is null)
+            {
+                _focusableTarget.Disabled -= ClearTarget;
+                _focusableTarget.OnHoverEnd();
+                _focusableTarget = null;
+                _focusCursor.SetState(FocusCursor.CursorState.Free);
+                return;
+            }
+
+            _focusableTarget = focusable;
+            _focusableTarget.Disabled += ClearTarget;
+            _focusableTarget.OnHoverStart();
+            _focusCursor.SetState(FocusCursor.CursorState.Hovering);
+        }
+
+        void UnselectTarget()
+        {
+            if (!_isSelecting)
+                return;
+
+            _focusableTarget.OnUnselect();
+            _isSelecting = false;
+            _focusCursor.SetState(FocusCursor.CursorState.Hovering);
+        }
+
+        void ClearTarget()
+        {
+            if (_focusableTarget is null)
+                return;
+
+            UnselectTarget();
+            SetTarget(null);
+        }
+
+        bool TryGetFocusable(Component sourceObject, out IFocusable focusable)
+        {
+            sourceObject.GetComponents(_componentCache);
+            foreach (var focusableComponent in _componentCache)
+            {
+                if (focusableComponent.Enabled)
                 {
-                    _focusableTarget.OnHoverEnd();
-                    _focusableTarget = null;
-                    _focusCursor.SetState(FocusCursor.CursorState.Free);
+                    focusable = focusableComponent;
+                    return true;
                 }
             }
+
+            focusable = null;
+            return false;
         }
     }
 }

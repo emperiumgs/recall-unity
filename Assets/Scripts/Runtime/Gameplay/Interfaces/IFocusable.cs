@@ -8,7 +8,7 @@ namespace Recall.Gameplay.Interfaces
         event Action Disabled;
 
         Collider2D Collider { get; }
-        bool IsDraggable { get; }
+        bool Enabled { get; }
 
         void OnHoverStart();
 
@@ -19,5 +19,7 @@ namespace Recall.Gameplay.Interfaces
         void OnUnselect();
 
         void OnDrag(Vector2 delta, Vector2 finalPosition);
+
+        bool IsDraggable();
     }
 }
