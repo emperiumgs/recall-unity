@@ -61,7 +61,10 @@ namespace Recall.Gameplay
                 respawnable.RespawnedAt += OnRespawned;
 
             if (TryGetComponent<IOozable>(out var oozable))
-                oozable.Oozed += OnOozed;
+                oozable.Oozed += OnImmovableState;
+
+            if (TryGetComponent<FocusBehavior>(out var focus))
+                focus.Focused += OnImmovableState;
         }
 
         public void Attack()
@@ -166,9 +169,9 @@ namespace Recall.Gameplay
             SetKnifeRenderer(true);
         }
 
-        void OnOozed(bool isOozed)
+        void OnImmovableState(bool stateActive)
         {
-            if (isOozed)
+            if (stateActive)
                 ResetCombatState();
         }
 
