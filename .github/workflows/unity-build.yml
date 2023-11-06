@@ -1,4 +1,4 @@
-name: Unity Build (Development)
+name: Unity Build
 on:
   push:
     branches:
