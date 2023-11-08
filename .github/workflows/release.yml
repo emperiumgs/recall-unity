@@ -1,9 +1,10 @@
 name: Release
+
 on:
   push:
     branches:
       - main
-      - ci/setup-ci
+
 jobs:
   release:
     name: Semantic Release
@@ -21,8 +22,6 @@ jobs:
           @semantic-release/changelog
           semantic-release-replace-plugin
           @semantic-release/git
-        ci: false
-        dry_run: true
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
   build-windows:

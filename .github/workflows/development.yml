@@ -1,18 +1,13 @@
 name: Development
 
 on:
-  push:
+  pull_request:
     branches:
       - main
-  # pull_request:
-  #   branches:
-  #     - main
 
 jobs:
   build-windows:
     uses: ./.github/workflows/unity-build.yml
     with:
-      checkout-ref: ${{ github.ref }}
       versioning: 'Semantic'
     secrets: inherit
-
