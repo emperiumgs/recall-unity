@@ -4,6 +4,7 @@ on:
     branches:
     - main
     - ci/setup-ci
+    
 jobs:
   release:
     name: release
