@@ -23,7 +23,7 @@ jobs:
           @semantic-release/changelog
           semantic-release-replace-plugin
           @semantic-release/git
-        # branch: main
+        branch: main
         ci: false
         dry_run: true
       env:
