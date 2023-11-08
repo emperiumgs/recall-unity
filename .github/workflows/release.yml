@@ -23,12 +23,6 @@ jobs:
           @semantic-release/changelog
           semantic-release-replace-plugin
           @semantic-release/git
-        branches: |
-          [
-            'main',
-            'refs/pull/3/merge'
-            'ci/setup-ci'
-          ]
         ci: false
         dry_run: true
       env:

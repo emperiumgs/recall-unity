@@ -1,4 +1,5 @@
 {
+  "branches": ["main", "ci/setup-ci"],
   "tagFormat": "${version}",
   "plugins": [
     ["@semantic-release/commit-analyzer", { "preset": "angular" }],
