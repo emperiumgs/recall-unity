@@ -27,50 +27,9 @@ jobs:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
   build-windows:
     needs: release
-    name: Build StandaloneWindows64
-    runs-on: windows-2019
-    steps:
-      # Checkout
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ needs.release.outputs.new_release_version }}
-          fetch-depth: 0
-          lfs: true
-      # Cache
-      - uses: actions/cache@v3
-        with:
-          path: Library
-          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
-          restore-keys: |
-            Library-
-      # Build
-      - name: Build project
-        id: build-0
-        uses: game-ci/unity-builder@v3
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
-          targetPlatform: StandaloneWindows64
-        continue-on-error: true
-      # Build Retry (temp workaround for https://github.com/game-ci/unity-builder/issues/569)
-      - name: Retry Build
-        if: ${{ steps.build-0.outcome == 'failure' }}
-        id: build-1
-        uses: game-ci/unity-builder@v3
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
-          targetPlatform: StandaloneWindows64
-          allowDirtyBuild: true
-          versioning: Custom
-          version: ${{ needs.release.outputs.new_release_version }}
-      # Output
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Build
-          path: build
+    uses: ./.github/workflows/unity-build.yml
+    with:
+      checkout-ref: ${{ needs.release.outputs.new_release_version }}
+      versioning: 'Custom'
+      version: ${{ needs.release.outputs.new_release_version }}
+    secrets: inherit
