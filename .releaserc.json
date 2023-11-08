@@ -1,5 +1,5 @@
 {
-  "branches": ["main", "ci/setup-ci", "refs/pull/3/merge"],
+  "branches": ["main", "ci/setup-ci"],
   "tagFormat": "${version}",
   "plugins": [
     ["@semantic-release/commit-analyzer", { "preset": "angular" }],
