@@ -1,0 +1,35 @@
+name: Release
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+      branches:
+      - main
+jobs:
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+    - name: Semantic Release
+      id: semantic
+      uses: cycjimmy/semantic-release-action@v4
+      with:
+        extra_plugins: |
+          @semantic-release/changelog
+          semantic-release-replace-plugin
+          @semantic-release/git
+        # branch: main
+        dry_run: true
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    - name: Post Release Checkout
+      id: post_release
+      uses: actions/checkout@v3
+      if: steps.semantic.outputs.new_release_published == 'true'
+      with:
+        ref: ${{ steps.semantic.outputs.new_release_version }}
