@@ -12,13 +12,6 @@ on:
       version:
         required: false
         type: string
-    secrets:
-      UNITY_LICENSE:
-        required: true
-      UNITY_USERNAME:
-        required: true
-      UNITY_PASSWORD:
-        required: true
 
 jobs:
   build-windows:
