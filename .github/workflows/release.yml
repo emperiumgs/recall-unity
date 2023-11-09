@@ -4,11 +4,14 @@ on:
   push:
     branches:
       - main
+      - fix/release-build-ci
 
 jobs:
   release:
     name: Semantic Release
     runs-on: ubuntu-latest
+    outputs:
+      new_release_version: ${{ steps.semantic.outputs.new_release_version }}
     steps:
     - uses: actions/checkout@v3
       with:
@@ -22,6 +25,8 @@ jobs:
           @semantic-release/changelog
           semantic-release-replace-plugin
           @semantic-release/git
+        dry_run: true
+        ci: false
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
   build-windows:
