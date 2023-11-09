@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - fix/release-build-ci
 
 jobs:
   release:
@@ -25,8 +24,6 @@ jobs:
           @semantic-release/changelog
           semantic-release-replace-plugin
           @semantic-release/git
-        dry_run: true
-        ci: false
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
   build-windows:
