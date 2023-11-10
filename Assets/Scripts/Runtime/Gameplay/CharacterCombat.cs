@@ -156,7 +156,7 @@ namespace Recall.Gameplay
 
         void ResetCombatState()
         {
-            if (_state == CombatState.Attacking)
+            if (_state == CombatState.Attacking || _state == CombatState.Ready)
                 ClearAttack();
             else if (_state == CombatState.Defending)
                 SetDefending(false);
