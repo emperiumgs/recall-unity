@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Recall.Gameplay
 {
-    public class Door : MonoBehaviour
+    public class DoorBehavior : MonoBehaviour
     {
         [SerializeField]
         Vector2 _openPosition = new(0, 1.5f);
