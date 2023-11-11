@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 5944541871953724562}
   - component: {fileID: 8948484000758128602}
   - component: {fileID: 6785375178128952933}
+  - component: {fileID: 2461019056125745152}
   m_Layer: 10
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -215,7 +216,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 41377c759ed79c443bc6a9604876fed6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -235,7 +236,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 4747677124225252949}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 41377c759ed79c443bc6a9604876fed6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -393,7 +394,7 @@ MonoBehaviour:
   _wallDetectWidth: 0.03
   _wallDetectHeightOffset: 0.2
   _speed: 4
-  _jumpForce: 8.75
+  _jumpForce: 8.65
 --- !u!114 &5355234871524211149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +517,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _focusMask: {fileID: 7709820678587194621}
+--- !u!114 &2461019056125745152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747677124225252949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718daf483584585408271e124baf205f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minDistanceThreshold: 0.05
 --- !u!1 &5591076633506855580
 GameObject:
   m_ObjectHideFlags: 0

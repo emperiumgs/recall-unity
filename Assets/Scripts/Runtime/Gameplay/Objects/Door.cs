@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using MyGameDevTools.Extensions;
 using UnityEngine;
 
 namespace Recall.Gameplay
@@ -10,17 +12,24 @@ namespace Recall.Gameplay
         [SerializeField]
         Vector2 _moveDestination = new(.6f, 0);
         [SerializeField]
-        bool _openByTrigger = true;
-        [SerializeField, Range(.1f, .5f)]
+        bool _locked = false;
+        [SerializeField, Range(.1f, 1.5f)]
         float _animationTime = .25f;
         [SerializeField]
         AnimationCurve _openCurve;
         [SerializeField]
         AnimationCurve _closeCurve;
+        [SerializeField, Range(0, .5f)]
+        float _regainInputGraceTime = .2f;
+        [SerializeField]
+        bool _startOpen;
 
+        CharacterMoveCommand _cachedMoveCommand;
         BoxCollider2D _doorCollider;
         BoxCollider2D _doorTrigger;
+        Transform _doorTransform;
         bool _isOpen;
+        int _playerLayer;
 
         void Awake()
         {
@@ -29,8 +38,7 @@ namespace Recall.Gameplay
 
         void OnEnable()
         {
-            if (!_openByTrigger)
-                _doorTrigger.enabled = false;
+            _doorTrigger.enabled = !_locked;
         }
 
         void OnDrawGizmosSelected()
@@ -48,16 +56,25 @@ namespace Recall.Gameplay
 
         void OnTriggerEnter2D(Collider2D collider)
         {
+            if (collider.gameObject.layer != _playerLayer)
+                return;
 
+            collider.GetComponent<InputController>().SetInputActive(false);
+            _cachedMoveCommand = collider.GetComponent<CharacterMoveCommand>();
+            _cachedMoveCommand.MoveCompleted += OnCharacterMoveCompleted;
+
+            if (!_isOpen)
+                Open(CommandCharacterMove);
+            else
+                CommandCharacterMove();
         }
         
-        public void Open()
+        public void Open(Action onComplete)
         {
             if (_isOpen)
                 return;
 
-            // add oncomplete callback
-            TransitionToState(_openPosition, _openCurve);
+            TransitionToState(_openPosition, _openCurve, onComplete);
             _isOpen = true;
         }
 
@@ -66,34 +83,60 @@ namespace Recall.Gameplay
             if (!_isOpen)
                 return;
 
-            TransitionToState(Vector2.zero, _closeCurve);
+            TransitionToState(Vector2.zero, _closeCurve, null);
+            _isOpen = false;
+        }
+
+        public void AllowOpening()
+        {
+            _locked = false;
         }
 
         void ResolveState(bool isOpen)
         {
-            _doorCollider.transform.position = isOpen ? _openPosition : Vector2.zero;
+            _doorTransform.localPosition = isOpen ? _openPosition : Vector2.zero;
+            _isOpen = isOpen;
         }
 
         void SetReferences()
         {
+            _playerLayer = LayerMask.NameToLayer("Player");
             _doorTrigger = GetComponent<BoxCollider2D>();
             _doorCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
+            _doorTransform = _doorCollider.transform;
+
+            ResolveState(_startOpen);
         }
 
-        Coroutine TransitionToState(Vector2 targetState, AnimationCurve curve)
+        void CommandCharacterMove()
+        {
+            _cachedMoveCommand.MoveToPosition((Vector2)transform.position + _moveDestination);
+        }
+
+        void OnCharacterMoveCompleted()
+        {
+            _cachedMoveCommand.MoveCompleted -= OnCharacterMoveCompleted;
+
+            Close();
+            this.DelayCall(_regainInputGraceTime, () => _cachedMoveCommand.GetComponent<InputController>().SetInputActive(true));
+        }
+
+        Coroutine TransitionToState(Vector2 targetState, AnimationCurve curve, Action onComplete)
         {
             return StartCoroutine(transitionRoutine());
             IEnumerator transitionRoutine()
             {
                 var endOfFrame = new WaitForEndOfFrame();
-                var initialState = (Vector2)transform.position;
+                var initialState = (Vector2)_doorTransform.localPosition;
                 float time = 0;
                 while (time < _animationTime)
                 {
                     time += Time.deltaTime;
-                    transform.position = Vector2.Lerp(initialState, targetState, curve.Evaluate(time / _animationTime));
+                    _doorTransform.localPosition = Vector2.Lerp(initialState, targetState, curve.Evaluate(time / _animationTime));
                     yield return endOfFrame;
                 }
+
+                onComplete?.Invoke();
             }
         }
     }

@@ -59,9 +59,9 @@ namespace Recall.Gameplay
             _jumpHash = Animator.StringToHash("jump");
         }
 
-        public void SetHorizontalInput(float input)
+        void Update()
         {
-            _animator.SetBool(_walkingHash, input != 0);
+            _animator.SetBool(_walkingHash, _characterController.HorizontalInput != 0);
         }
 
         void ResetNavigationParams()

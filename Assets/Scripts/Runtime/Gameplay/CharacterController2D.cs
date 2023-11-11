@@ -20,10 +20,19 @@ namespace Recall.Gameplay
             public Vector2 Size;
         }
 
+        [Flags]
+        enum WallSide : byte
+        {
+            None = 0,
+            LeftSide = 1,
+            RightSide = 2
+        }
+
         public event Action<bool> GroundedStateChanged;
         public event Action<bool> FlippedStateChanged;
         public event Action Jumped;
 
+        public float HorizontalInput => _horizontalInput;
         public bool IsGrounded => _isGrounded;
         public bool IsFlipped => _isFlipped;
 
@@ -112,8 +121,11 @@ namespace Recall.Gameplay
         void FixedAirMove(ref Vector2 velocity)
         {
             _jumpInput = false;
-            if (IsWallSliding())
-                velocity.x = 0;
+            if (IsWallSliding(out var wallSlideFlags))
+            {
+                if (velocity.x > 0 && wallSlideFlags.HasFlag(WallSide.RightSide) || velocity.x < 0 && wallSlideFlags.HasFlag(WallSide.LeftSide))
+                    velocity.x = 0;
+            }
         }
 
         void ValidateGroundedState()
@@ -180,26 +192,27 @@ namespace Recall.Gameplay
             };
         }
 
-        WallDetectInfo GetWallDetectInfo(bool right)
+        WallDetectInfo GetWallDetectInfo(WallSide side)
         {
             var radius = _capsuleCollider.size.x;
             return new WallDetectInfo
             {
-                Position = new Vector2(transform.position.x + (right ? radius + _wallDetectWidth : -radius - _wallDetectWidth) / 2, transform.position.y + _capsuleCollider.size.y / 2),
+                Position = new Vector2(transform.position.x + (side == WallSide.RightSide ? radius + _wallDetectWidth : -radius - _wallDetectWidth) / 2, transform.position.y + _capsuleCollider.size.y / 2),
                 Size = new Vector2(_wallDetectWidth, _capsuleCollider.size.y - radius + _wallDetectHeightOffset)
             };
         }
 
-        bool IsWallSliding()
+        bool IsWallSliding(out WallSide wallSlideFlags)
         {
             WallDetectInfo info;
+            wallSlideFlags = WallSide.None;
             for (int i = 0; i < 2; i++)
             {
-                info = GetWallDetectInfo(i == 0);
+                info = GetWallDetectInfo(i == 0 ? WallSide.RightSide : WallSide.LeftSide);
                 if (Physics2D.OverlapBoxNonAlloc(info.Position, info.Size, 0, _overlapCache, _wallLayers.value) > 0)
-                    return true;
+                    wallSlideFlags |= i == 0 ? WallSide.RightSide : WallSide.LeftSide;
             }
-            return false;
+            return wallSlideFlags == WallSide.None;
         }
 
         void OnDrawGizmosSelected()
@@ -213,7 +226,7 @@ namespace Recall.Gameplay
             WallDetectInfo info;
             for (int i = 0; i < 2; i++)
             {
-                info = GetWallDetectInfo(i == 0);
+                info = GetWallDetectInfo(i == 0 ? WallSide.RightSide : WallSide.LeftSide);
                 Gizmos.DrawWireCube(info.Position, info.Size);
             }
         }
