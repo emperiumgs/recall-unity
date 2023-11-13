@@ -76,10 +76,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 59.45, y: 3.05}
+    - - {x: 59.45, y: 1.6}
       - {x: 59.45, y: 5.7}
       - {x: 0, y: 5.7}
       - {x: 0, y: -5.8}
       - {x: 91.45, y: -5.8}
-      - {x: 91.45, y: 3.05}
+      - {x: 91.45, y: 1.6}
   m_UseDelaunayMesh: 0

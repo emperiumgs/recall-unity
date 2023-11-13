@@ -78,6 +78,12 @@ namespace Recall.Gameplay
             _isOpen = true;
         }
 
+        public void OpenAndUnlock()
+        {
+            Unlock();
+            Open(null);
+        }
+
         public void Close()
         {
             if (!_isOpen)
@@ -87,9 +93,10 @@ namespace Recall.Gameplay
             _isOpen = false;
         }
 
-        public void AllowOpening()
+        public void Unlock()
         {
             _locked = false;
+            _doorTrigger.enabled = true;
         }
 
         void ResolveState(bool isOpen)
