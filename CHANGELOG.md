@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/emperiumgs/recall-unity/compare/0.2.1...0.3.0) (2023-11-14)
+
+
+### Features
+
+* add doors and sectors ([#14](https://github.com/emperiumgs/recall-unity/issues/14)) ([a94f7cf](https://github.com/emperiumgs/recall-unity/commit/a94f7cfd0501bef614762d3df48afabee8cef000))
+
 ## [0.2.1](https://github.com/emperiumgs/recall-unity/compare/0.2.0...0.2.1) (2023-11-09)
 
 
