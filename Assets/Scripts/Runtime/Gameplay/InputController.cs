@@ -7,7 +7,6 @@ namespace Recall.Gameplay
     public class InputController : MonoBehaviour
     {
         CharacterController2D _characterController;
-        CharacterAnimator _characterAnimator;
         CharacterCombat _characterCombat;
         FocusBehavior _focus;
         bool _inFocus;
@@ -15,7 +14,6 @@ namespace Recall.Gameplay
         void Awake()
         {
             _characterController = GetComponent<CharacterController2D>();
-            _characterAnimator = GetComponent<CharacterAnimator>();
             _characterCombat = GetComponent<CharacterCombat>();
             _focus = GetComponent<FocusBehavior>();
             _focus.Focused += OnFocused;
@@ -54,7 +52,6 @@ namespace Recall.Gameplay
 
             var horizontal = Input.GetAxis("Horizontal");
             _characterController.SetInputs(horizontal, Input.GetButtonDown("Jump"));
-            _characterAnimator.SetHorizontalInput(horizontal);
         }
 
         public void SetInputActive(bool value)
