@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MyGameDevTools.Extensions;
 using Recall.Gameplay.Interfaces;
 using UnityEngine;
 
@@ -43,7 +44,10 @@ namespace Recall.Gameplay
             Cursor.visible = !value;
             _focusCursor.SetPosition(_mainCamera.ViewportToWorldPoint(Vector2.one / 2));
             _focusCursor.SetState(FocusCursor.CursorState.Free);
-            _focusCursor.gameObject.SetActive(value);
+            if (value)
+                this.DelayCallInFrames(1, () => _focusCursor.gameObject.SetActive(value));
+            else
+                _focusCursor.gameObject.SetActive(value);
             FocusModeChanged?.Invoke(value);
         }
 

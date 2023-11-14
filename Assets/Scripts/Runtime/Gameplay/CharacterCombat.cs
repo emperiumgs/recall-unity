@@ -79,7 +79,7 @@ namespace Recall.Gameplay
 
         public void SetDefending(bool value)
         {
-            if (value && _state == CombatState.Ready || _state == CombatState.Attacking || _state == CombatState.CoolingDown)
+            if (value && _state != CombatState.Defending)
             {
                 if (_comboIndex > 0)
                     ClearAttack();
@@ -144,22 +144,25 @@ namespace Recall.Gameplay
 
         void ClearAttack()
         {
-            _comboIndex = 0;
             SetKnifeRenderer(true);
 
             if (_cooldownRoutine is not null)
                 StopCoroutine(_cooldownRoutine);
             _cooldownRoutine = Cooldown();
 
-            ComboEnded?.Invoke();
+            if (_comboIndex > 0)
+            {
+                _comboIndex = 0;
+                ComboEnded?.Invoke();
+            }
         }
 
         void ResetCombatState()
         {
-            if (_state == CombatState.Attacking || _state == CombatState.Ready)
-                ClearAttack();
-            else if (_state == CombatState.Defending)
+            if (_state == CombatState.Defending)
                 SetDefending(false);
+            else
+                ClearAttack();
         }
 
         void OnDamageTaken(int damage) => ResetCombatState();

@@ -17,6 +17,10 @@ namespace Recall.Gameplay
         {
             _focusSystem = FindAnyObjectByType<FocusSystem>();
 
+            var characterHealth = GetComponent<CharacterHealth>();
+            characterHealth.DamageTaken += OnTakeDamage;
+            characterHealth.Killed += CancelFocus;
+
             _focusMask.transform.SetParent(null, true);
             _focusMask.SetActive(false);
         }
@@ -31,6 +35,17 @@ namespace Recall.Gameplay
             _focusSystem.SetFocus(value);
             _focusMask.SetActive(value);
             Focused?.Invoke(value);
+        }
+
+        void OnTakeDamage(int damage)
+        {
+            CancelFocus();
+        }
+
+        void CancelFocus()
+        {
+            if (_focusSystem.FocusActive)
+                ToggleFocus();
         }
     }
 }
