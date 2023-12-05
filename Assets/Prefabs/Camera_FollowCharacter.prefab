@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2449316729426519379}
   - component: {fileID: 5789364580454993443}
   - component: {fileID: 4698423142467565579}
+  - component: {fileID: 8609269095747620657}
   m_Layer: 0
   m_Name: Camera_FollowCharacter
   m_TagString: Untagged
@@ -88,6 +89,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 0}
   m_Damping: 1
   m_MaxWindowSize: -1
+--- !u!114 &8609269095747620657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712525933183297390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d87325ffd7891a47a90642be710a848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7212392120273863374
 GameObject:
   m_ObjectHideFlags: 0
