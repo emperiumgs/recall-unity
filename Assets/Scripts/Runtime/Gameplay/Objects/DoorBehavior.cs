@@ -59,7 +59,7 @@ namespace Recall.Gameplay
             if (collider.gameObject.layer != _playerLayer)
                 return;
 
-            collider.GetComponent<InputController>().SetInputActive(false);
+            collider.GetComponent<InputController>().SetInputFlags(InputFlags.None);
             _cachedMoveCommand = collider.GetComponent<CharacterMoveCommand>();
             _cachedMoveCommand.MoveCompleted += OnCharacterMoveCompleted;
 
@@ -125,7 +125,7 @@ namespace Recall.Gameplay
             _cachedMoveCommand.MoveCompleted -= OnCharacterMoveCompleted;
 
             Close();
-            this.DelayCall(_regainInputGraceTime, () => _cachedMoveCommand.GetComponent<InputController>().SetInputActive(true));
+            this.DelayCall(_regainInputGraceTime, () => _cachedMoveCommand.GetComponent<InputController>().SetInputFlags(InputFlags.All));
         }
 
         Coroutine TransitionToState(Vector2 targetState, AnimationCurve curve, Action onComplete)

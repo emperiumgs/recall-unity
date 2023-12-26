@@ -6082,11 +6082,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4747677124225252949, guid: 1847c03c006dbc549bd93c714d3ae61e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4211422235767618756}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1847c03c006dbc549bd93c714d3ae61e, type: 3}
 --- !u!95 &4211422235767618752 stripped
 Animator:
@@ -6100,54 +6096,18 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 4211422235767618751}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4211422235767618754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4747677124225252949, guid: 1847c03c006dbc549bd93c714d3ae61e,
+--- !u!114 &4211422235767618756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1306694605356118405, guid: 1847c03c006dbc549bd93c714d3ae61e,
     type: 3}
   m_PrefabInstance: {fileID: 4211422235767618751}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4211422235767618755 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7134028095550080647, guid: 1847c03c006dbc549bd93c714d3ae61e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4211422235767618751}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4211422235767618754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85807d22540e90429100a3fca841a3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4211422235767618756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4211422235767618754}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 1c497b26f5ee40e47ba4c3384dc1dd4c, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4211422235767618755}
-          m_TargetAssemblyTypeName: Recall.Gameplay.InputController, Recall.Gameplay
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!4 &4706914672412926641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7292942568221880575, guid: 95e551aefc9533b4e96140b770563857,

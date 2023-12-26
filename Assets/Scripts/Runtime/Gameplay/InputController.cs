@@ -1,14 +1,26 @@
+using System;
 using Recall.Gameplay.Interfaces;
 using UnityEngine;
 
 namespace Recall.Gameplay
 {
+    [Flags, Serializable]
+    public enum InputFlags
+    {
+        None = 0,
+        Focus = 0b1,
+        Movement = 0b10,
+        Combat = 0b100,
+        All = Focus | Movement | Combat
+    }
+
     [DisallowMultipleComponent]
     public class InputController : MonoBehaviour
     {
         CharacterController2D _characterController;
         CharacterCombat _characterCombat;
         FocusBehavior _focus;
+        InputFlags _inputFlags;
         bool _inFocus;
 
         void Awake()
@@ -36,42 +48,58 @@ namespace Recall.Gameplay
 
         void Update()
         {
-            if (Input.GetButtonDown("Focus"))
+            if (_inputFlags.HasFlag(InputFlags.Focus) && Input.GetButtonDown("Focus"))
                 _focus.ToggleFocus();
 
             if (_inFocus)
                 return;
 
-            if (Input.GetButtonDown("Shield"))
-                _characterCombat.SetDefending(true);
-            else if (Input.GetButtonUp("Shield"))
-                _characterCombat.SetDefending(false);
+            if (_inputFlags.HasFlag(InputFlags.Combat))
+            {
+                if (Input.GetButtonDown("Shield"))
+                    _characterCombat.SetDefending(true);
+                else if (Input.GetButtonUp("Shield"))
+                    _characterCombat.SetDefending(false);
 
-            if (Input.GetButtonDown("Fire1"))
-                _characterCombat.Attack();
+                if (Input.GetButtonDown("Fire1"))
+                    _characterCombat.Attack();
+            }
 
-            var horizontal = Input.GetAxis("Horizontal");
-            _characterController.SetInputs(horizontal, Input.GetButtonDown("Jump"));
+            float horizontal = 0;
+            bool jump = false;
+            if (_inputFlags.HasFlag(InputFlags.Movement))
+            {
+                horizontal = Input.GetAxis("Horizontal");
+                jump = Input.GetButtonDown("Jump");
+            }
+            _characterController.SetInputs(horizontal, jump);
         }
 
-        public void SetInputActive(bool value)
+        public void SetInput(bool active)
         {
-            enabled = value;
-            if (!value)
-            {
-                _characterController.SetInputs(0, false);
+            SetInputFlags(active ? InputFlags.All : InputFlags.None);
+        }
+
+        public void SetFocusOnlyInput()
+        {
+            SetInputFlags(InputFlags.Focus);
+        }
+
+        public void SetInputFlags(InputFlags flags)
+        {
+            _inputFlags = flags;
+            if (!flags.HasFlag(InputFlags.Focus))
                 _inFocus = false;
-            }
         }
 
         void OnRespawned(Vector2 position)
         {
-            SetInputActive(true);
+            SetInputFlags(InputFlags.All);
         }
 
         void OnDamageTaken(int damage)
         {
-            SetInputActive(false);
+            SetInputFlags(InputFlags.None);
         }
 
         void OnFocused(bool isFocused)
@@ -81,17 +109,17 @@ namespace Recall.Gameplay
 
         void OnDeath()
         {
-            SetInputActive(false);
+            SetInputFlags(InputFlags.None);
         }
 
         void OnRecovered()
         {
-            SetInputActive(true);
+            SetInputFlags(InputFlags.All);
         }
 
         void OnOozed(bool isOozed)
         {
-            SetInputActive(!isOozed);
+            SetInputFlags(isOozed ? InputFlags.None : InputFlags.All);
         }
     }
 }
