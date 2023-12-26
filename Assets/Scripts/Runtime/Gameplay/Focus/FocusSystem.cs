@@ -75,7 +75,11 @@ namespace Recall.Gameplay
             else
             {
                 _focusCursor.SetPosition(inputPosition);
-                if (Physics2D.OverlapCircleNonAlloc(inputPosition, .1f, _circleCastCache, _interactableMask) > 0)
+                if (Physics2D.OverlapCircle(inputPosition, .1f, new ContactFilter2D
+                {
+                    useLayerMask = true,
+                    layerMask = _interactableMask.value
+                }, _circleCastCache) > 0)
                 {
                     if (!TryGetFocusable(_circleCastCache[0], out var focusable) || !focusable.Enabled)
                         return;

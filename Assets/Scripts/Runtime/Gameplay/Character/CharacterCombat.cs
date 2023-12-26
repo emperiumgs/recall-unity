@@ -112,7 +112,11 @@ namespace Recall.Gameplay
             if (_comboIndex == 0)
                 return;
 
-            if (Physics2D.OverlapBoxNonAlloc(GetAttackBoxCenter(), _attackDetectionArea, 0, _colliderCache, _enemyMask) == 0)
+            if (Physics2D.OverlapBox(GetAttackBoxCenter(), _attackDetectionArea, 0, new ContactFilter2D
+            {
+                useLayerMask = true,
+                layerMask = _enemyMask.value
+            }, _colliderCache) == 0)
                 return;
 
             IDamageable damageable;

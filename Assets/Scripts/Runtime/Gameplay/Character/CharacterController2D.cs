@@ -131,7 +131,12 @@ namespace Recall.Gameplay
         void ValidateGroundedState()
         {
             var groundDetectInfo = GetGroundDetectInfo();
-            _isGrounded = Physics2D.OverlapCircleNonAlloc(groundDetectInfo.Position, groundDetectInfo.Radius, _overlapCache, _groundLayers.value) > 0;
+            
+            _isGrounded = Physics2D.OverlapCircle(groundDetectInfo.Position, groundDetectInfo.Radius, new ContactFilter2D
+            {
+                useLayerMask = true,
+                layerMask = _groundLayers.value
+            }, _overlapCache) > 0;
 
             if (_wasGroundedLastFrame != _isGrounded)
                 GroundedStateChanged?.Invoke(_isGrounded);
@@ -209,7 +214,11 @@ namespace Recall.Gameplay
             for (int i = 0; i < 2; i++)
             {
                 info = GetWallDetectInfo(i == 0 ? WallSide.RightSide : WallSide.LeftSide);
-                if (Physics2D.OverlapBoxNonAlloc(info.Position, info.Size, 0, _overlapCache, _wallLayers.value) > 0)
+                if (Physics2D.OverlapBox(info.Position, info.Size, 0, new ContactFilter2D
+                {
+                    useLayerMask = true,
+                    layerMask = _wallLayers.value
+                }, _overlapCache) > 0)
                     wallSlideFlags |= i == 0 ? WallSide.RightSide : WallSide.LeftSide;
             }
             return wallSlideFlags == WallSide.None;
