@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9059113608077616823}
   - component: {fileID: 6651405058777536146}
+  - component: {fileID: 3271304164836415804}
   m_Layer: 0
   m_Name: Soundtrack
   m_TagString: Untagged
@@ -44,6 +45,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243000014242539536, guid: bf307b7828a4dba44b4886a3abc3649e,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: e381cdddc4457704ab060bb6be70d9a6, type: 3}
+  m_Resource: {fileID: 8300000, guid: e381cdddc4457704ab060bb6be70d9a6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -129,3 +131,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &3271304164836415804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184514955053253830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 0777c07cb023f26459b7910a199558f0, type: 2}
+    - {fileID: 11400000, guid: a2bfc46f8c2c0eb45af032b82a6a8df3, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6651405058777536146}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: set_volume
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0.3
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6651405058777536146}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: set_volume
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
