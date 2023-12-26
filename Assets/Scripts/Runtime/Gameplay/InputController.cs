@@ -20,7 +20,7 @@ namespace Recall.Gameplay
         CharacterController2D _characterController;
         CharacterCombat _characterCombat;
         FocusBehavior _focus;
-        InputFlags _inputFlags;
+        InputFlags _inputFlags = InputFlags.All;
         bool _inFocus;
 
         void Awake()
