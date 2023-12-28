@@ -2313,7 +2313,7 @@ TextureImporter:
       213: 21301538
     second: sprites_425
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -8321,48 +8321,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0000
-      rect:
-        serializedVersion: 2
-        x: 1886
-        y: 510
-        width: 22
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25505410000000000800000000000000
-      internalID: 21300562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0001
-      rect:
-        serializedVersion: 2
-        x: 1886
-        y: 510
-        width: 22
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45505410000000000800000000000000
-      internalID: 21300564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0002
       rect:
         serializedVersion: 2
@@ -8370,8 +8328,8 @@ TextureImporter:
         y: 510
         width: 22
         height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.53, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8384,48 +8342,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0003
-      rect:
-        serializedVersion: 2
-        x: 1294
-        y: 712
-        width: 77
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85505410000000000800000000000000
-      internalID: 21300568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0004
-      rect:
-        serializedVersion: 2
-        x: 1294
-        y: 712
-        width: 77
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5505410000000000800000000000000
-      internalID: 21300570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0005
       rect:
         serializedVersion: 2
@@ -8433,8 +8349,8 @@ TextureImporter:
         y: 712
         width: 77
         height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.56, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8447,48 +8363,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0006
-      rect:
-        serializedVersion: 2
-        x: 1679
-        y: 606
-        width: 119
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5505410000000000800000000000000
-      internalID: 21300574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0007
-      rect:
-        serializedVersion: 2
-        x: 1679
-        y: 606
-        width: 119
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06505410000000000800000000000000
-      internalID: 21300576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0008
       rect:
         serializedVersion: 2
@@ -8496,8 +8370,8 @@ TextureImporter:
         y: 606
         width: 119
         height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.58, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8510,48 +8384,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0009
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 14
-        width: 161
-        height: 143
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 46505410000000000800000000000000
-      internalID: 21300580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0010
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 14
-        width: 161
-        height: 143
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66505410000000000800000000000000
-      internalID: 21300582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0011
       rect:
         serializedVersion: 2
@@ -8559,8 +8391,8 @@ TextureImporter:
         y: 14
         width: 161
         height: 143
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.59, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8573,48 +8405,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0012
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 823
-        width: 156
-        height: 276
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a6505410000000000800000000000000
-      internalID: 21300586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0013
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 823
-        width: 156
-        height: 276
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c6505410000000000800000000000000
-      internalID: 21300588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0014
       rect:
         serializedVersion: 2
@@ -8622,8 +8412,8 @@ TextureImporter:
         y: 823
         width: 156
         height: 276
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.72, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8636,48 +8426,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0015
-      rect:
-        serializedVersion: 2
-        x: 749
-        y: 744
-        width: 134
-        height: 355
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 07505410000000000800000000000000
-      internalID: 21300592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0016
-      rect:
-        serializedVersion: 2
-        x: 749
-        y: 744
-        width: 134
-        height: 355
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27505410000000000800000000000000
-      internalID: 21300594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0017
       rect:
         serializedVersion: 2
@@ -8685,8 +8433,8 @@ TextureImporter:
         y: 744
         width: 134
         height: 355
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.59, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8699,48 +8447,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0018
-      rect:
-        serializedVersion: 2
-        x: 1107
-        y: 777
-        width: 133
-        height: 381
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 67505410000000000800000000000000
-      internalID: 21300598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0019
-      rect:
-        serializedVersion: 2
-        x: 1107
-        y: 777
-        width: 133
-        height: 381
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87505410000000000800000000000000
-      internalID: 21300600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0020
       rect:
         serializedVersion: 2
@@ -8748,8 +8454,8 @@ TextureImporter:
         y: 777
         width: 133
         height: 381
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.67, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8762,48 +8468,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0021
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 438
-        width: 109
-        height: 383
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7505410000000000800000000000000
-      internalID: 21300604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0022
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 438
-        width: 109
-        height: 383
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7505410000000000800000000000000
-      internalID: 21300606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0023
       rect:
         serializedVersion: 2
@@ -8811,8 +8475,8 @@ TextureImporter:
         y: 438
         width: 109
         height: 383
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.41, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8825,48 +8489,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0024
-      rect:
-        serializedVersion: 2
-        x: 1294
-        y: 770
-        width: 47
-        height: 388
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 28505410000000000800000000000000
-      internalID: 21300610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0025
-      rect:
-        serializedVersion: 2
-        x: 1294
-        y: 770
-        width: 47
-        height: 388
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48505410000000000800000000000000
-      internalID: 21300612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0026
       rect:
         serializedVersion: 2
@@ -8874,8 +8496,8 @@ TextureImporter:
         y: 770
         width: 47
         height: 388
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.62, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8888,48 +8510,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vfx_smoke0027
-      rect:
-        serializedVersion: 2
-        x: 2003
-        y: 1661
-        width: 34
-        height: 385
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88505410000000000800000000000000
-      internalID: 21300616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vfx_smoke0028
-      rect:
-        serializedVersion: 2
-        x: 2003
-        y: 1661
-        width: 34
-        height: 385
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8505410000000000800000000000000
-      internalID: 21300618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vfx_smoke0029
       rect:
         serializedVersion: 2
@@ -8937,8 +8517,8 @@ TextureImporter:
         y: 1661
         width: 34
         height: 385
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
