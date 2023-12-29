@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Recall.Gameplay
 {
     [Flags, Serializable]
-    public enum InputFlags
+    public enum InputFlags : byte
     {
         None = 0,
         Focus = 0b1,
